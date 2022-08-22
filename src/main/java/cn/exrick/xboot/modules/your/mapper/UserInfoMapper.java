@@ -1,7 +1,7 @@
 package cn.exrick.xboot.modules.your.mapper;
 
-import com.baomidou.mybatisplus.core.mapper.BaseMapper;
 import cn.exrick.xboot.modules.your.entity.UserInfo;
+import com.baomidou.mybatisplus.core.mapper.BaseMapper;
 import org.springframework.stereotype.Repository;
 
 import java.util.List;
@@ -13,4 +13,9 @@ import java.util.List;
 @Repository
 public interface UserInfoMapper extends BaseMapper<UserInfo> {
 
+    List<UserInfo> loginAuth(String name, String pwd);
+
+    List<UserInfo> getUserIdByUsername(String name);
+
+    List<UserInfo> getAll();
 }

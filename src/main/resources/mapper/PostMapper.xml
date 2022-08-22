@@ -54,8 +54,9 @@
             p.support_count,
             p.user_id
         from s_post p
-        INNER JOIN s_user_info u
-        ON u.id=p.id
+                 INNER JOIN s_user_info u
+                            ON u.id=p.user_id
+        order by create_time desc
     </select>
 <!--查询所有信息-->
     <select id="selectAllPost" resultMap="BaseResultMap">
