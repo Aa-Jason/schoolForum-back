@@ -6,15 +6,15 @@ import cn.exrick.xboot.common.vo.PageVo;
 import cn.exrick.xboot.common.vo.Result;
 import cn.exrick.xboot.modules.your.entity.UserInfo;
 import cn.exrick.xboot.modules.your.service.IUserInfoService;
-import cn.hutool.core.util.StrUtil;
-import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
 import com.baomidou.mybatisplus.core.metadata.IPage;
 import io.swagger.annotations.Api;
+import io.swagger.annotations.ApiImplicitParam;
+import io.swagger.annotations.ApiImplicitParams;
 import io.swagger.annotations.ApiOperation;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.*;
 import org.springframework.transaction.annotation.Transactional;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
@@ -26,10 +26,38 @@ import java.util.List;
 @Api(tags = "用户信息表管理接口")
 @RequestMapping("/xboot/userInfo")
 @Transactional
+@CrossOrigin(origins = "*",maxAge = 3600)
 public class UserInfoController {
 
     @Autowired
     private IUserInfoService iUserInfoService;
+
+    //验证账号和密码
+    public Result<List<UserInfo>> get(@PathVariable String name,@PathVariable  String pwd) {
+
+        List<UserInfo> login = iUserInfoService.loginAuth(name,pwd);
+        return new ResultUtil<List<UserInfo>>().setData(login);
+    }
+
+    //用账号获取用户id
+    public Result<List<UserInfo>> get(@PathVariable String name) {
+
+        List<UserInfo> userid =  iUserInfoService.getUserIdByUsername(name);
+        return new ResultUtil<List<UserInfo>>().setData(userid);
+    }
+
+    @ApiOperation(value="登录接口")
+    @ApiImplicitParams({
+            @ApiImplicitParam(dataType = "string",name="username",value="用户登录账号",required = true),
+            @ApiImplicitParam(dataType = "string",name="password",value="用户登录密码",required = true),
+    })
+    @GetMapping(value="/login")
+    public Result<List<UserInfo>> login(@RequestParam("username") String name,
+                      @RequestParam(value = "password") String pwd){
+        List<UserInfo> result0 = iUserInfoService.loginAuth(name,pwd);
+        String username= result0.get(0).getUsername();
+        return new ResultUtil<List<UserInfo>>().setData(iUserInfoService.getUserIdByUsername(username)) ;
+    }
 
     @RequestMapping(value = "/get/{id}", method = RequestMethod.GET)
     @ApiOperation(value = "通过id获取")
@@ -40,7 +68,7 @@ public class UserInfoController {
     }
 
     @RequestMapping(value = "/getAll", method = RequestMethod.GET)
-    @ApiOperation(value = "获取全部数据")
+    @ApiOperation(value = "获取全部用户信息")
     public Result<List<UserInfo>> getAll() {
 
         List<UserInfo> list = iUserInfoService.list();
