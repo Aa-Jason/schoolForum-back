@@ -3773,3 +3773,546 @@ This generated password is for development use only. Your security configuration
 2022-08-23 16:48:19.522  INFO 17480 --- [SpringApplicationShutdownHook] o.s.m.s.b.SimpleBrokerMessageHandler     : Stopped.
 2022-08-23 16:48:19.527  INFO 17480 --- [SpringApplicationShutdownHook] org.quartz.core.QuartzScheduler          : Scheduler quartzScheduler_$_NON_CLUSTERED paused.
 2022-08-23 16:48:19.531  INFO 17480 --- [SpringApplicationShutdownHook] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
+2022-08-23 19:34:06.160  INFO 6620 --- [restartedMain] cn.exrick.xboot.XbootApplication         : Starting XbootApplication using Java 1.8.0_333 on DESKTOP-5IPDRKO with PID 6620 (D:\java\xboot\target\classes started by LA in D:\java\xboot)
+2022-08-23 19:34:06.162  INFO 6620 --- [restartedMain] cn.exrick.xboot.XbootApplication         : No active profile set, falling back to 1 default profile: "default"
+2022-08-23 19:34:06.305  INFO 6620 --- [restartedMain] o.s.b.devtools.restart.ChangeableUrls    : The Class-Path manifest attribute in C:\Users\LA\.m2\repository\org\apache\xmlgraphics\fop\0.94\fop-0.94.jar referenced one or more files that do not exist: file:/C:/Users/LA/.m2/repository/org/apache/xmlgraphics/fop/0.94/avalon-framework-4.2.0.jar,file:/C:/Users/LA/.m2/repository/org/apache/xmlgraphics/fop/0.94/batik-all-1.6.jar,file:/C:/Users/LA/.m2/repository/org/apache/xmlgraphics/fop/0.94/commons-io-1.3.1.jar,file:/C:/Users/LA/.m2/repository/org/apache/xmlgraphics/fop/0.94/commons-logging-1.0.4.jar,file:/C:/Users/LA/.m2/repository/org/apache/xmlgraphics/fop/0.94/fop-hyph.jar,file:/C:/Users/LA/.m2/repository/org/apache/xmlgraphics/fop/0.94/jai_codec.jar,file:/C:/Users/LA/.m2/repository/org/apache/xmlgraphics/fop/0.94/jai_core.jar,file:/C:/Users/LA/.m2/repository/org/apache/xmlgraphics/fop/0.94/jimi.jar,file:/C:/Users/LA/.m2/repository/org/apache/xmlgraphics/fop/0.94/serializer-2.7.0.jar,file:/C:/Users/LA/.m2/repository/org/apache/xmlgraphics/fop/0.94/servlet-2.2.jar,file:/C:/Users/LA/.m2/repository/org/apache/xmlgraphics/fop/0.94/xalan-2.7.0.jar,file:/C:/Users/LA/.m2/repository/org/apache/xmlgraphics/fop/0.94/xercesImpl-2.7.1.jar,file:/C:/Users/LA/.m2/repository/org/apache/xmlgraphics/fop/0.94/xml-apis-1.3.02.jar,file:/C:/Users/LA/.m2/repository/org/apache/xmlgraphics/fop/0.94/xmlgraphics-commons-1.2.jar,file:/C:/Users/LA/.m2/repository/org/apache/xmlgraphics/fop/0.94/xmlunit1.0.jar
+2022-08-23 19:34:06.307  INFO 6620 --- [restartedMain] o.s.b.devtools.restart.ChangeableUrls    : The Class-Path manifest attribute in C:\Users\LA\.m2\repository\org\apache\xmlgraphics\batik-js\1.7\batik-js-1.7.jar referenced one or more files that do not exist: file:/C:/Users/LA/.m2/repository/org/apache/xmlgraphics/batik-js/1.7/xbean.jar
+2022-08-23 19:34:06.308  INFO 6620 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2022-08-23 19:34:06.308  INFO 6620 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2022-08-23 19:34:09.198  INFO 6620 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2022-08-23 19:34:09.199  INFO 6620 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2022-08-23 19:34:09.766  INFO 6620 --- [restartedMain] .RepositoryConfigurationExtensionSupport : Spring Data JPA - Could not safely identify store assignment for repository candidate interface cn.exrick.xboot.modules.base.dao.elasticsearch.EsLogDao. If you want this repository to be a JPA repository, consider annotating your entities with one of these annotations: javax.persistence.Entity, javax.persistence.MappedSuperclass (preferred), or consider extending one of the following types with your repository: org.springframework.data.jpa.repository.JpaRepository.
+2022-08-23 19:34:09.929  INFO 6620 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 717 ms. Found 29 JPA repository interfaces.
+2022-08-23 19:34:09.945  INFO 6620 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2022-08-23 19:34:09.947  INFO 6620 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2022-08-23 19:34:09.995  INFO 6620 --- [restartedMain] .RepositoryConfigurationExtensionSupport : Spring Data Redis - Could not safely identify store assignment for repository candidate interface cn.exrick.xboot.modules.activiti.dao.ActBusinessDao. If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository.
+2022-08-23 19:34:09.997  INFO 6620 --- [restartedMain] .RepositoryConfigurationExtensionSupport : Spring Data Redis - Could not safely identify store assignment for repository candidate interface cn.exrick.xboot.modules.activiti.dao.ActCategoryDao. If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository.
+2022-08-23 19:34:09.997  INFO 6620 --- [restartedMain] .RepositoryConfigurationExtensionSupport : Spring Data Redis - Could not safely identify store assignment for repository candidate interface cn.exrick.xboot.modules.activiti.dao.ActModelDao. If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository.
+2022-08-23 19:34:09.998  INFO 6620 --- [restartedMain] .RepositoryConfigurationExtensionSupport : Spring Data Redis - Could not safely identify store assignment for repository candidate interface cn.exrick.xboot.modules.activiti.dao.ActNodeDao. If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository.
+2022-08-23 19:34:10.000  INFO 6620 --- [restartedMain] .RepositoryConfigurationExtensionSupport : Spring Data Redis - Could not safely identify store assignment for repository candidate interface cn.exrick.xboot.modules.activiti.dao.ActProcessDao. If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository.
+2022-08-23 19:34:10.001  INFO 6620 --- [restartedMain] .RepositoryConfigurationExtensionSupport : Spring Data Redis - Could not safely identify store assignment for repository candidate interface cn.exrick.xboot.modules.activiti.dao.business.LeaveDao. If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository.
+2022-08-23 19:34:10.002  INFO 6620 --- [restartedMain] .RepositoryConfigurationExtensionSupport : Spring Data Redis - Could not safely identify store assignment for repository candidate interface cn.exrick.xboot.modules.app.dao.MemberDao. If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository.
+2022-08-23 19:34:10.004  INFO 6620 --- [restartedMain] .RepositoryConfigurationExtensionSupport : Spring Data Redis - Could not safely identify store assignment for repository candidate interface cn.exrick.xboot.modules.autochat.dao.AutoChatDao. If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository.
+2022-08-23 19:34:10.005  INFO 6620 --- [restartedMain] .RepositoryConfigurationExtensionSupport : Spring Data Redis - Could not safely identify store assignment for repository candidate interface cn.exrick.xboot.modules.base.dao.DepartmentDao. If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository.
+2022-08-23 19:34:10.008  INFO 6620 --- [restartedMain] .RepositoryConfigurationExtensionSupport : Spring Data Redis - Could not safely identify store assignment for repository candidate interface cn.exrick.xboot.modules.base.dao.DepartmentHeaderDao. If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository.
+2022-08-23 19:34:10.009  INFO 6620 --- [restartedMain] .RepositoryConfigurationExtensionSupport : Spring Data Redis - Could not safely identify store assignment for repository candidate interface cn.exrick.xboot.modules.base.dao.DictDao. If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository.
+2022-08-23 19:34:10.010  INFO 6620 --- [restartedMain] .RepositoryConfigurationExtensionSupport : Spring Data Redis - Could not safely identify store assignment for repository candidate interface cn.exrick.xboot.modules.base.dao.DictDataDao. If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository.
+2022-08-23 19:34:10.011  INFO 6620 --- [restartedMain] .RepositoryConfigurationExtensionSupport : Spring Data Redis - Could not safely identify store assignment for repository candidate interface cn.exrick.xboot.modules.base.dao.LogDao. If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository.
+2022-08-23 19:34:10.012  INFO 6620 --- [restartedMain] .RepositoryConfigurationExtensionSupport : Spring Data Redis - Could not safely identify store assignment for repository candidate interface cn.exrick.xboot.modules.base.dao.MessageDao. If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository.
+2022-08-23 19:34:10.013  INFO 6620 --- [restartedMain] .RepositoryConfigurationExtensionSupport : Spring Data Redis - Could not safely identify store assignment for repository candidate interface cn.exrick.xboot.modules.base.dao.MessageSendDao. If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository.
+2022-08-23 19:34:10.018  INFO 6620 --- [restartedMain] .RepositoryConfigurationExtensionSupport : Spring Data Redis - Could not safely identify store assignment for repository candidate interface cn.exrick.xboot.modules.base.dao.PermissionDao. If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository.
+2022-08-23 19:34:10.019  INFO 6620 --- [restartedMain] .RepositoryConfigurationExtensionSupport : Spring Data Redis - Could not safely identify store assignment for repository candidate interface cn.exrick.xboot.modules.base.dao.RoleDao. If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository.
+2022-08-23 19:34:10.020  INFO 6620 --- [restartedMain] .RepositoryConfigurationExtensionSupport : Spring Data Redis - Could not safely identify store assignment for repository candidate interface cn.exrick.xboot.modules.base.dao.RoleDepartmentDao. If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository.
+2022-08-23 19:34:10.021  INFO 6620 --- [restartedMain] .RepositoryConfigurationExtensionSupport : Spring Data Redis - Could not safely identify store assignment for repository candidate interface cn.exrick.xboot.modules.base.dao.RolePermissionDao. If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository.
+2022-08-23 19:34:10.022  INFO 6620 --- [restartedMain] .RepositoryConfigurationExtensionSupport : Spring Data Redis - Could not safely identify store assignment for repository candidate interface cn.exrick.xboot.modules.base.dao.SettingDao. If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository.
+2022-08-23 19:34:10.025  INFO 6620 --- [restartedMain] .RepositoryConfigurationExtensionSupport : Spring Data Redis - Could not safely identify store assignment for repository candidate interface cn.exrick.xboot.modules.base.dao.StopWordDao. If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository.
+2022-08-23 19:34:10.026  INFO 6620 --- [restartedMain] .RepositoryConfigurationExtensionSupport : Spring Data Redis - Could not safely identify store assignment for repository candidate interface cn.exrick.xboot.modules.base.dao.UserDao. If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository.
+2022-08-23 19:34:10.027  INFO 6620 --- [restartedMain] .RepositoryConfigurationExtensionSupport : Spring Data Redis - Could not safely identify store assignment for repository candidate interface cn.exrick.xboot.modules.base.dao.UserRoleDao. If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository.
+2022-08-23 19:34:10.028  INFO 6620 --- [restartedMain] .RepositoryConfigurationExtensionSupport : Spring Data Redis - Could not safely identify store assignment for repository candidate interface cn.exrick.xboot.modules.base.dao.elasticsearch.EsLogDao. If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository.
+2022-08-23 19:34:10.029  INFO 6620 --- [restartedMain] .RepositoryConfigurationExtensionSupport : Spring Data Redis - Could not safely identify store assignment for repository candidate interface cn.exrick.xboot.modules.file.dao.FileCategoryDao. If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository.
+2022-08-23 19:34:10.031  INFO 6620 --- [restartedMain] .RepositoryConfigurationExtensionSupport : Spring Data Redis - Could not safely identify store assignment for repository candidate interface cn.exrick.xboot.modules.file.dao.FileDao. If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository.
+2022-08-23 19:34:10.033  INFO 6620 --- [restartedMain] .RepositoryConfigurationExtensionSupport : Spring Data Redis - Could not safely identify store assignment for repository candidate interface cn.exrick.xboot.modules.open.dao.ClientDao. If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository.
+2022-08-23 19:34:10.034  INFO 6620 --- [restartedMain] .RepositoryConfigurationExtensionSupport : Spring Data Redis - Could not safely identify store assignment for repository candidate interface cn.exrick.xboot.modules.quartz.dao.QuartzJobDao. If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository.
+2022-08-23 19:34:10.035  INFO 6620 --- [restartedMain] .RepositoryConfigurationExtensionSupport : Spring Data Redis - Could not safely identify store assignment for repository candidate interface cn.exrick.xboot.modules.social.dao.SocialDao. If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository.
+2022-08-23 19:34:10.036  INFO 6620 --- [restartedMain] .RepositoryConfigurationExtensionSupport : Spring Data Redis - Could not safely identify store assignment for repository candidate interface cn.exrick.xboot.modules.your.dao.StudentDao. If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository.
+2022-08-23 19:34:10.036  INFO 6620 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 77 ms. Found 0 Redis repository interfaces.
+2022-08-23 19:34:10.389  WARN 6620 --- [restartedMain] o.m.s.mapper.ClassPathMapperScanner      : Skipping MapperFactoryBean with name 'studentDao' and 'cn.exrick.xboot.modules.your.dao.StudentDao' mapperInterface. Bean already defined with the same name!
+2022-08-23 19:34:10.734  INFO 6620 --- [restartedMain] ptablePropertiesBeanFactoryPostProcessor : Post-processing PropertySource instances
+2022-08-23 19:34:10.735  INFO 6620 --- [restartedMain] c.u.j.EncryptablePropertySourceConverter : Skipping PropertySource configurationProperties [class org.springframework.boot.context.properties.source.ConfigurationPropertySourcesPropertySource
+2022-08-23 19:34:10.736  INFO 6620 --- [restartedMain] c.u.j.EncryptablePropertySourceConverter : Skipping PropertySource servletConfigInitParams [class org.springframework.core.env.PropertySource$StubPropertySource
+2022-08-23 19:34:10.737  INFO 6620 --- [restartedMain] c.u.j.EncryptablePropertySourceConverter : Skipping PropertySource servletContextInitParams [class org.springframework.core.env.PropertySource$StubPropertySource
+2022-08-23 19:34:10.739  INFO 6620 --- [restartedMain] c.u.j.EncryptablePropertySourceConverter : Converting PropertySource systemProperties [org.springframework.core.env.PropertiesPropertySource] to EncryptableMapPropertySourceWrapper
+2022-08-23 19:34:10.741  INFO 6620 --- [restartedMain] c.u.j.EncryptablePropertySourceConverter : Converting PropertySource systemEnvironment [org.springframework.boot.env.SystemEnvironmentPropertySourceEnvironmentPostProcessor$OriginAwareSystemEnvironmentPropertySource] to EncryptableSystemEnvironmentPropertySourceWrapper
+2022-08-23 19:34:10.742  INFO 6620 --- [restartedMain] c.u.j.EncryptablePropertySourceConverter : Converting PropertySource random [org.springframework.boot.env.RandomValuePropertySource] to EncryptablePropertySourceWrapper
+2022-08-23 19:34:10.742  INFO 6620 --- [restartedMain] c.u.j.EncryptablePropertySourceConverter : Converting PropertySource Config resource 'class path resource [application.yml]' via location 'optional:classpath:/' [org.springframework.boot.env.OriginTrackedMapPropertySource] to EncryptableMapPropertySourceWrapper
+2022-08-23 19:34:10.742  INFO 6620 --- [restartedMain] c.u.j.EncryptablePropertySourceConverter : Converting PropertySource devtools [org.springframework.core.env.MapPropertySource] to EncryptableMapPropertySourceWrapper
+2022-08-23 19:34:11.125  INFO 6620 --- [restartedMain] c.u.j.filter.DefaultLazyPropertyFilter   : Property Filter custom Bean not found with name 'encryptablePropertyFilter'. Initializing Default Property Filter
+2022-08-23 19:34:11.140  INFO 6620 --- [restartedMain] c.u.j.r.DefaultLazyPropertyResolver      : Property Resolver custom Bean not found with name 'encryptablePropertyResolver'. Initializing Default Property Resolver
+2022-08-23 19:34:11.143  INFO 6620 --- [restartedMain] c.u.j.d.DefaultLazyPropertyDetector      : Property Detector custom Bean not found with name 'encryptablePropertyDetector'. Initializing Default Property Detector
+2022-08-23 19:34:11.159  INFO 6620 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'redisCacheConfig' of type [cn.exrick.xboot.config.cache.RedisCacheConfig$$EnhancerBySpringCGLIB$$711bf8f3] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-08-23 19:34:11.221  INFO 6620 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.security.access.expression.method.DefaultMethodSecurityExpressionHandler@2747631c' of type [org.springframework.security.access.expression.method.DefaultMethodSecurityExpressionHandler] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-08-23 19:34:11.229  INFO 6620 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'methodSecurityMetadataSource' of type [org.springframework.security.access.method.DelegatingMethodSecurityMetadataSource] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-08-23 19:34:11.972  INFO 6620 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8888 (http)
+2022-08-23 19:34:11.974  INFO 6620 --- [restartedMain] o.a.catalina.core.AprLifecycleListener   : Loaded Apache Tomcat Native library [1.2.33] using APR version [1.7.0].
+2022-08-23 19:34:11.974  INFO 6620 --- [restartedMain] o.a.catalina.core.AprLifecycleListener   : APR capabilities: IPv6 [true], sendfile [true], accept filters [false], random [true], UDS [true].
+2022-08-23 19:34:11.974  INFO 6620 --- [restartedMain] o.a.catalina.core.AprLifecycleListener   : APR/OpenSSL configuration: useAprConnector [false], useOpenSSL [true]
+2022-08-23 19:34:12.000  INFO 6620 --- [restartedMain] o.a.catalina.core.AprLifecycleListener   : OpenSSL successfully initialized [OpenSSL 1.1.1o  3 May 2022]
+2022-08-23 19:34:12.015  INFO 6620 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-08-23 19:34:12.015  INFO 6620 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.63]
+2022-08-23 19:34:12.252  INFO 6620 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2022-08-23 19:34:12.252  INFO 6620 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 5942 ms
+2022-08-23 19:34:12.266  INFO 6620 --- [restartedMain] c.u.j.encryptor.DefaultLazyEncryptor     : String Encryptor custom Bean not found with name 'jasyptStringEncryptor'. Initializing Default String Encryptor
+2022-08-23 19:34:12.288  INFO 6620 --- [restartedMain] c.u.j.c.StringEncryptorBuilder           : Encryptor config not found for property jasypt.encryptor.algorithm, using default value: PBEWITHHMACSHA512ANDAES_256
+2022-08-23 19:34:12.288  INFO 6620 --- [restartedMain] c.u.j.c.StringEncryptorBuilder           : Encryptor config not found for property jasypt.encryptor.key-obtention-iterations, using default value: 1000
+2022-08-23 19:34:12.288  INFO 6620 --- [restartedMain] c.u.j.c.StringEncryptorBuilder           : Encryptor config not found for property jasypt.encryptor.pool-size, using default value: 1
+2022-08-23 19:34:12.289  INFO 6620 --- [restartedMain] c.u.j.c.StringEncryptorBuilder           : Encryptor config not found for property jasypt.encryptor.provider-name, using default value: null
+2022-08-23 19:34:12.289  INFO 6620 --- [restartedMain] c.u.j.c.StringEncryptorBuilder           : Encryptor config not found for property jasypt.encryptor.provider-class-name, using default value: null
+2022-08-23 19:34:12.290  INFO 6620 --- [restartedMain] c.u.j.c.StringEncryptorBuilder           : Encryptor config not found for property jasypt.encryptor.salt-generator-classname, using default value: org.jasypt.salt.RandomSaltGenerator
+2022-08-23 19:34:12.292  INFO 6620 --- [restartedMain] c.u.j.c.StringEncryptorBuilder           : Encryptor config not found for property jasypt.encryptor.iv-generator-classname, using default value: org.jasypt.iv.RandomIvGenerator
+2022-08-23 19:34:12.293  INFO 6620 --- [restartedMain] c.u.j.c.StringEncryptorBuilder           : Encryptor config not found for property jasypt.encryptor.string-output-type, using default value: base64
+2022-08-23 19:34:13.188  INFO 6620 --- [restartedMain] c.a.d.s.b.a.DruidDataSourceAutoConfigure : Init DruidDataSource
+2022-08-23 19:34:13.545  INFO 6620 --- [restartedMain] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} inited
+2022-08-23 19:34:13.769  INFO 6620 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-08-23 19:34:13.874  INFO 6620 --- [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.4.33
+2022-08-23 19:34:13.878  INFO 6620 --- [restartedMain] org.hibernate.cfg.Environment            : HHH000205: Loaded properties from resource hibernate.properties: {hibernate.bytecode.use_reflection_optimizer=false, hibernate.dialect.storage_engine=innodb}
+2022-08-23 19:34:14.129  INFO 6620 --- [restartedMain] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2022-08-23 19:34:14.988  INFO 6620 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL57Dialect
+2022-08-23 19:34:18.726  INFO 6620 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-08-23 19:34:18.743  INFO 6620 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2022-08-23 19:34:19.295  WARN 6620 --- [restartedMain] c.e.x.c.s.p.MyFilterSecurityInterceptor  : Could not validate configuration attributes as the SecurityMetadataSource did not return any attributes from getAllConfigAttributes()
+2022-08-23 19:34:19.607  INFO 6620 --- [restartedMain] org.redisson.Version                     : Redisson 3.17.2
+2022-08-23 19:34:21.052  INFO 6620 --- [redisson-netty-2-11] o.r.c.pool.MasterPubSubConnectionPool    : 1 connections initialized for 127.0.0.1/127.0.0.1:6379
+2022-08-23 19:34:21.171  INFO 6620 --- [redisson-netty-2-19] o.r.c.pool.MasterConnectionPool          : 24 connections initialized for 127.0.0.1/127.0.0.1:6379
+2022-08-23 19:34:24.159  WARN 6620 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2022-08-23 19:34:25.798  INFO 6620 --- [restartedMain] o.a.engine.impl.ProcessEngineImpl        : ProcessEngine default created
+2022-08-23 19:34:25.800  INFO 6620 --- [restartedMain] o.a.e.i.a.AbstractAsyncJobExecutor       : Starting up the default async job executor [org.activiti.spring.SpringAsyncExecutor].
+2022-08-23 19:34:25.805  INFO 6620 --- [Thread-46] o.a.e.i.a.AcquireAsyncJobsDueRunnable    : starting to acquire async jobs due
+2022-08-23 19:34:25.811  INFO 6620 --- [Thread-45] o.a.e.i.a.AcquireTimerJobsRunnable       : starting to acquire async jobs due
+2022-08-23 19:34:28.394  INFO 6620 --- [restartedMain] org.quartz.impl.StdSchedulerFactory      : Using default implementation for ThreadExecutor
+2022-08-23 19:34:28.408  INFO 6620 --- [restartedMain] org.quartz.core.SchedulerSignalerImpl    : Initialized Scheduler Signaller of type: class org.quartz.core.SchedulerSignalerImpl
+2022-08-23 19:34:28.408  INFO 6620 --- [restartedMain] org.quartz.core.QuartzScheduler          : Quartz Scheduler v.2.3.2 created.
+2022-08-23 19:34:28.414  INFO 6620 --- [restartedMain] o.s.s.quartz.LocalDataSourceJobStore     : Using db table-based data access locking (synchronization).
+2022-08-23 19:34:28.416  INFO 6620 --- [restartedMain] o.s.s.quartz.LocalDataSourceJobStore     : JobStoreCMT initialized.
+2022-08-23 19:34:28.417  INFO 6620 --- [restartedMain] org.quartz.core.QuartzScheduler          : Scheduler meta-data: Quartz Scheduler (v2.3.2) 'quartzScheduler' with instanceId 'NON_CLUSTERED'
+  Scheduler class: 'org.quartz.core.QuartzScheduler' - running locally.
+  NOT STARTED.
+  Currently in standby mode.
+  Number of jobs executed: 0
+  Using thread pool 'org.quartz.simpl.SimpleThreadPool' - with 10 threads.
+  Using job-store 'org.springframework.scheduling.quartz.LocalDataSourceJobStore' - which supports persistence. and is not clustered.
+
+2022-08-23 19:34:28.417  INFO 6620 --- [restartedMain] org.quartz.impl.StdSchedulerFactory      : Quartz scheduler 'quartzScheduler' initialized from an externally provided properties instance.
+2022-08-23 19:34:28.417  INFO 6620 --- [restartedMain] org.quartz.impl.StdSchedulerFactory      : Quartz scheduler version: 2.3.2
+2022-08-23 19:34:28.417  INFO 6620 --- [restartedMain] org.quartz.core.QuartzScheduler          : JobFactory set to: org.springframework.scheduling.quartz.SpringBeanJobFactory@6d3d484d
+2022-08-23 19:34:29.064  WARN 6620 --- [restartedMain] c.b.m.core.metadata.TableInfoHelper      : Can not find table primary key in Class: "cn.exrick.xboot.modules.your.entity.Users".
+2022-08-23 19:34:29.065  WARN 6620 --- [restartedMain] c.b.m.core.injector.DefaultSqlInjector   : class cn.exrick.xboot.modules.your.entity.Users ,Not found @TableId annotation, Cannot use Mybatis-Plus 'xxById' Method.
+2022-08-23 19:34:29.823  INFO 6620 --- [restartedMain] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 15 endpoint(s) beneath base path '/xboot/actuator'
+2022-08-23 19:34:30.039  INFO 6620 --- [restartedMain] pertySourcedRequestMappingHandlerMapping : Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2ControllerWebMvc#getDocumentation(String, HttpServletRequest)]
+2022-08-23 19:34:31.101  INFO 6620 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2022-08-23 19:34:34.295  INFO 6620 --- [restartedMain] o.s.d.elasticsearch.support.VersionInfo  : Version Spring Data Elasticsearch: 4.2.11
+2022-08-23 19:34:34.295  INFO 6620 --- [restartedMain] o.s.d.elasticsearch.support.VersionInfo  : Version Elasticsearch Client in build: 7.12.1
+2022-08-23 19:34:34.295  INFO 6620 --- [restartedMain] o.s.d.elasticsearch.support.VersionInfo  : Version Elasticsearch Client used: 7.12.1
+2022-08-23 19:34:34.502  WARN 6620 --- [restartedMain] .s.s.UserDetailsServiceAutoConfiguration : 
+
+Using generated security password: 422ae46a-e97b-42a6-9fa5-0a6406c936d9
+
+This generated password is for development use only. Your security configuration must be updated before running your application in production.
+
+2022-08-23 19:34:34.681  INFO 6620 --- [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Will not secure any request
+2022-08-23 19:34:34.943  INFO 6620 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8888 (http) with context path ''
+2022-08-23 19:34:34.944  INFO 6620 --- [restartedMain] u.j.c.RefreshScopeRefreshedEventListener : Refreshing cached encryptable property sources on ServletWebServerInitializedEvent
+2022-08-23 19:34:34.946  INFO 6620 --- [restartedMain] CachingDelegateEncryptablePropertySource : Property Source systemProperties refreshed
+2022-08-23 19:34:34.946  INFO 6620 --- [restartedMain] CachingDelegateEncryptablePropertySource : Property Source systemEnvironment refreshed
+2022-08-23 19:34:34.946  INFO 6620 --- [restartedMain] CachingDelegateEncryptablePropertySource : Property Source random refreshed
+2022-08-23 19:34:34.946  INFO 6620 --- [restartedMain] CachingDelegateEncryptablePropertySource : Property Source Config resource 'class path resource [application.yml]' via location 'optional:classpath:/' refreshed
+2022-08-23 19:34:34.946  INFO 6620 --- [restartedMain] CachingDelegateEncryptablePropertySource : Property Source devtools refreshed
+2022-08-23 19:34:34.946  INFO 6620 --- [restartedMain] c.u.j.EncryptablePropertySourceConverter : Converting PropertySource server.ports [org.springframework.core.env.MapPropertySource] to EncryptableMapPropertySourceWrapper
+2022-08-23 19:34:34.946  INFO 6620 --- [restartedMain] c.u.j.EncryptablePropertySourceConverter : Skipping PropertySource configurationProperties [class org.springframework.boot.context.properties.source.ConfigurationPropertySourcesPropertySource
+2022-08-23 19:34:34.946  INFO 6620 --- [restartedMain] c.u.j.EncryptablePropertySourceConverter : Skipping PropertySource servletConfigInitParams [class org.springframework.core.env.PropertySource$StubPropertySource
+2022-08-23 19:34:34.948  INFO 6620 --- [restartedMain] c.u.j.EncryptablePropertySourceConverter : Converting PropertySource servletContextInitParams [org.springframework.web.context.support.ServletContextPropertySource] to EncryptableEnumerablePropertySourceWrapper
+2022-08-23 19:34:34.948  INFO 6620 --- [restartedMain] c.u.j.EncryptablePropertySourceConverter : Converting PropertySource Management Server [org.springframework.boot.actuate.autoconfigure.web.server.ManagementContextAutoConfiguration$SameManagementContextConfiguration$1] to EncryptablePropertySourceWrapper
+2022-08-23 19:34:34.949  INFO 6620 --- [restartedMain] d.s.w.p.DocumentationPluginsBootstrapper : Documentation plugins bootstrapped
+2022-08-23 19:34:34.953  INFO 6620 --- [restartedMain] d.s.w.p.DocumentationPluginsBootstrapper : Found 2 custom documentation plugin(s)
+2022-08-23 19:34:35.082  INFO 6620 --- [restartedMain] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
+2022-08-23 19:34:35.388  INFO 6620 --- [restartedMain] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: delByIdsUsingPOST_1
+2022-08-23 19:34:35.426  INFO 6620 --- [restartedMain] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: delByIdsUsingPOST_2
+2022-08-23 19:34:35.478  INFO 6620 --- [restartedMain] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: delByIdsUsingPOST_3
+2022-08-23 19:34:35.496  INFO 6620 --- [restartedMain] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: getByConditionUsingGET_1
+2022-08-23 19:34:35.521  INFO 6620 --- [restartedMain] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: getByConditionUsingGET_2
+2022-08-23 19:34:35.598  INFO 6620 --- [restartedMain] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: updateStatusUsingPOST_1
+2022-08-23 19:34:35.723  WARN 6620 --- [restartedMain] s.d.s.w.r.p.ParameterDataTypeReader      : Trying to infer dataType java.lang.String[]
+2022-08-23 19:34:35.724  INFO 6620 --- [restartedMain] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: delByIdsUsingPOST_4
+2022-08-23 19:34:35.731  INFO 6620 --- [restartedMain] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: getUsingGET_1
+2022-08-23 19:34:35.743  INFO 6620 --- [restartedMain] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: getAllUsingGET_1
+2022-08-23 19:34:35.753  INFO 6620 --- [restartedMain] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: getByConditionUsingGET_3
+2022-08-23 19:34:35.756  INFO 6620 --- [restartedMain] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: getByPageUsingGET_1
+2022-08-23 19:34:35.779  WARN 6620 --- [restartedMain] s.d.s.w.r.p.ParameterDataTypeReader      : Trying to infer dataType java.lang.String[]
+2022-08-23 19:34:35.780  INFO 6620 --- [restartedMain] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: delByIdsUsingPOST_5
+2022-08-23 19:34:35.785  INFO 6620 --- [restartedMain] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: getUsingGET_2
+2022-08-23 19:34:35.792  INFO 6620 --- [restartedMain] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: saveUsingPOST_1
+2022-08-23 19:34:35.795  INFO 6620 --- [restartedMain] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: updateUsingPUT_1
+2022-08-23 19:34:35.802  INFO 6620 --- [restartedMain] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: getAllUsingGET_2
+2022-08-23 19:34:35.816  INFO 6620 --- [restartedMain] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: getByConditionUsingGET_4
+2022-08-23 19:34:35.820  INFO 6620 --- [restartedMain] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: getByPageUsingGET_2
+2022-08-23 19:34:35.828  INFO 6620 --- [restartedMain] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: delAllByIdsUsingPOST_1
+2022-08-23 19:34:35.841  INFO 6620 --- [restartedMain] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: saveOrUpdateUsingPOST_1
+2022-08-23 19:34:35.850  INFO 6620 --- [restartedMain] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: getByPageUsingGET_3
+2022-08-23 19:34:35.865  INFO 6620 --- [restartedMain] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: getUsingGET_3
+2022-08-23 19:34:35.869  INFO 6620 --- [restartedMain] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: getAllUsingGET_3
+2022-08-23 19:34:35.891  INFO 6620 --- [restartedMain] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: addUsingPOST_1
+2022-08-23 19:34:35.896  INFO 6620 --- [restartedMain] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: delByIdsUsingPOST_6
+2022-08-23 19:34:35.903  INFO 6620 --- [restartedMain] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: editUsingPOST_1
+2022-08-23 19:34:35.912  INFO 6620 --- [restartedMain] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: getByParentIdUsingGET_1
+2022-08-23 19:34:35.916  INFO 6620 --- [restartedMain] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: searchByTitleUsingGET_1
+2022-08-23 19:34:35.926  INFO 6620 --- [restartedMain] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: addUsingPOST_2
+2022-08-23 19:34:35.930  INFO 6620 --- [restartedMain] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: delAllByIdsUsingPOST_2
+2022-08-23 19:34:35.934  INFO 6620 --- [restartedMain] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: editUsingPOST_2
+2022-08-23 19:34:35.950  INFO 6620 --- [restartedMain] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: getAllUsingGET_4
+2022-08-23 19:34:35.966  INFO 6620 --- [restartedMain] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: addUsingPOST_3
+2022-08-23 19:34:35.968  INFO 6620 --- [restartedMain] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: delByIdsUsingPOST_7
+2022-08-23 19:34:35.971  INFO 6620 --- [restartedMain] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: editUsingPOST_3
+2022-08-23 19:34:35.987  INFO 6620 --- [restartedMain] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: getByConditionUsingGET_5
+2022-08-23 19:34:36.006  INFO 6620 --- [restartedMain] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: addUsingPOST_4
+2022-08-23 19:34:36.014  INFO 6620 --- [restartedMain] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: delByIdsUsingPOST_8
+2022-08-23 19:34:36.017  INFO 6620 --- [restartedMain] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: editUsingPOST_4
+2022-08-23 19:34:36.035  INFO 6620 --- [restartedMain] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: getByConditionUsingGET_6
+2022-08-23 19:34:36.038  INFO 6620 --- [restartedMain] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: searchByTitleUsingGET_2
+2022-08-23 19:34:36.071  INFO 6620 --- [restartedMain] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: getFileListUsingGET_1
+2022-08-23 19:34:36.079  INFO 6620 --- [restartedMain] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: clearTrashUsingGET_1
+2022-08-23 19:34:36.081  INFO 6620 --- [restartedMain] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: collectUsingPOST_1
+2022-08-23 19:34:36.085  INFO 6620 --- [restartedMain] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: copyUsingPOST_1
+2022-08-23 19:34:36.087  INFO 6620 --- [restartedMain] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: deleteUsingPOST_1
+2022-08-23 19:34:36.090  INFO 6620 --- [restartedMain] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: renameUserFileUsingPOST_1
+2022-08-23 19:34:36.095  INFO 6620 --- [restartedMain] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: trashUsingPOST_1
+2022-08-23 19:34:36.103  INFO 6620 --- [restartedMain] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: getFileListUsingGET_2
+2022-08-23 19:34:36.107  INFO 6620 --- [restartedMain] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: loginUsingGET_1
+2022-08-23 19:34:36.109  INFO 6620 --- [restartedMain] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: callbackUsingGET_1
+2022-08-23 19:34:36.118  INFO 6620 --- [restartedMain] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: addUsingPOST_5
+2022-08-23 19:34:36.123  WARN 6620 --- [restartedMain] s.d.s.w.r.p.ParameterDataTypeReader      : Trying to infer dataType java.lang.String[]
+2022-08-23 19:34:36.124  INFO 6620 --- [restartedMain] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: delByIdsUsingPOST_9
+2022-08-23 19:34:36.128  INFO 6620 --- [restartedMain] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: getUsingGET_4
+2022-08-23 19:34:36.132  INFO 6620 --- [restartedMain] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: saveUsingPOST_2
+2022-08-23 19:34:36.134  INFO 6620 --- [restartedMain] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: updateUsingPUT_2
+2022-08-23 19:34:36.139  INFO 6620 --- [restartedMain] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: getAllUsingGET_5
+2022-08-23 19:34:36.164  INFO 6620 --- [restartedMain] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: getByPageUsingGET_4
+2022-08-23 19:34:36.174  INFO 6620 --- [restartedMain] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: delByIdsUsingPOST_10
+2022-08-23 19:34:36.197  INFO 6620 --- [restartedMain] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: getUsingGET_5
+2022-08-23 19:34:36.207  INFO 6620 --- [restartedMain] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: getByConditionUsingGET_7
+2022-08-23 19:34:36.219  INFO 6620 --- [restartedMain] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: editUsingPOST_5
+2022-08-23 19:34:36.230  WARN 6620 --- [restartedMain] s.d.s.w.r.p.ParameterDataTypeReader      : Trying to infer dataType java.lang.String[]
+2022-08-23 19:34:36.231  INFO 6620 --- [restartedMain] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: delByIdsUsingPOST_11
+2022-08-23 19:34:36.234  INFO 6620 --- [restartedMain] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: getUsingGET_6
+2022-08-23 19:34:36.237  INFO 6620 --- [restartedMain] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: saveUsingPOST_3
+2022-08-23 19:34:36.243  INFO 6620 --- [restartedMain] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: updateUsingPUT_3
+2022-08-23 19:34:36.299  INFO 6620 --- [restartedMain] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: getAllUsingGET_6
+2022-08-23 19:34:36.311  INFO 6620 --- [restartedMain] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: getByConditionUsingGET_8
+2022-08-23 19:34:36.317  INFO 6620 --- [restartedMain] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: getByPageUsingGET_5
+2022-08-23 19:34:36.340  INFO 6620 --- [restartedMain] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: delByIdsUsingPOST_12
+2022-08-23 19:34:36.365  INFO 6620 --- [restartedMain] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: addUsingPOST_6
+2022-08-23 19:34:36.371  INFO 6620 --- [restartedMain] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: editUsingPOST_6
+2022-08-23 19:34:36.383  INFO 6620 --- [restartedMain] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: getByParentIdUsingGET_2
+2022-08-23 19:34:36.387  INFO 6620 --- [restartedMain] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: searchPermissionListUsingGET_1
+2022-08-23 19:34:36.404  INFO 6620 --- [restartedMain] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: delAllByIdsUsingPOST_3
+2022-08-23 19:34:36.420  INFO 6620 --- [restartedMain] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: saveOrUpdateUsingPOST_2
+2022-08-23 19:34:36.425  INFO 6620 --- [restartedMain] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: getByPageUsingGET_6
+2022-08-23 19:34:36.432  INFO 6620 --- [restartedMain] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: getUsingGET_7
+2022-08-23 19:34:36.434  INFO 6620 --- [restartedMain] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: getAllUsingGET_7
+2022-08-23 19:34:36.448  INFO 6620 --- [restartedMain] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: loginUsingGET_2
+2022-08-23 19:34:36.471  INFO 6620 --- [restartedMain] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: getAllByPageUsingGET_1
+2022-08-23 19:34:36.477  INFO 6620 --- [restartedMain] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: delAllUsingPOST_1
+2022-08-23 19:34:36.484  INFO 6620 --- [restartedMain] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: infoUsingGET_1
+2022-08-23 19:34:36.486  INFO 6620 --- [restartedMain] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: saveUsingPOST_4
+2022-08-23 19:34:36.497  INFO 6620 --- [restartedMain] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: getAllByPageUsingGET_2
+2022-08-23 19:34:36.506  INFO 6620 --- [restartedMain] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: delByIdsUsingPOST_13
+2022-08-23 19:34:36.520  INFO 6620 --- [restartedMain] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: editUsingPOST_7
+2022-08-23 19:34:36.524  INFO 6620 --- [restartedMain] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: saveUsingPOST_5
+2022-08-23 19:34:36.654  INFO 6620 --- [restartedMain] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: delByIdsUsingPOST_14
+2022-08-23 19:34:36.671  INFO 6620 --- [restartedMain] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: delByIdsUsingPOST_15
+2022-08-23 19:34:36.683  INFO 6620 --- [restartedMain] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: saveUsingPOST_6
+2022-08-23 19:34:36.703  INFO 6620 --- [restartedMain] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: getByConditionUsingGET_9
+2022-08-23 19:34:36.713  WARN 6620 --- [restartedMain] s.d.s.w.r.p.ParameterDataTypeReader      : Trying to infer dataType java.lang.String[]
+2022-08-23 19:34:36.714  INFO 6620 --- [restartedMain] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: delByIdsUsingPOST_16
+2022-08-23 19:34:36.718  INFO 6620 --- [restartedMain] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: getUsingGET_8
+2022-08-23 19:34:36.724  INFO 6620 --- [restartedMain] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: saveUsingPOST_7
+2022-08-23 19:34:36.727  INFO 6620 --- [restartedMain] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: updateUsingPUT_4
+2022-08-23 19:34:36.732  INFO 6620 --- [restartedMain] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: getAllUsingGET_8
+2022-08-23 19:34:36.742  INFO 6620 --- [restartedMain] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: getByConditionUsingGET_10
+2022-08-23 19:34:36.747  INFO 6620 --- [restartedMain] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: getByPageUsingGET_7
+2022-08-23 19:34:36.749  INFO 6620 --- [restartedMain] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: loginUsingGET_3
+2022-08-23 19:34:36.755  INFO 6620 --- [restartedMain] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: delAllByIdsUsingPOST_4
+2022-08-23 19:34:36.764  INFO 6620 --- [restartedMain] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: saveOrUpdateUsingPOST_3
+2022-08-23 19:34:36.769  INFO 6620 --- [restartedMain] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: getByPageUsingGET_8
+2022-08-23 19:34:36.773  INFO 6620 --- [restartedMain] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: getUsingGET_9
+2022-08-23 19:34:36.775  INFO 6620 --- [restartedMain] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: getAllUsingGET_9
+2022-08-23 19:34:36.778  INFO 6620 --- [restartedMain] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: delAllByIdsUsingPOST_5
+2022-08-23 19:34:36.784  INFO 6620 --- [restartedMain] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: getUsingGET_10
+2022-08-23 19:34:36.790  INFO 6620 --- [restartedMain] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: saveOrUpdateUsingPOST_4
+2022-08-23 19:34:36.797  INFO 6620 --- [restartedMain] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: getByPageUsingGET_9
+2022-08-23 19:34:36.800  INFO 6620 --- [restartedMain] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: getAllUsingGET_10
+2022-08-23 19:34:36.811  INFO 6620 --- [restartedMain] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: loginUsingPOST_1
+2022-08-23 19:34:36.812  INFO 6620 --- [restartedMain] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: loginUsingGET_4
+2022-08-23 19:34:36.820  INFO 6620 --- [restartedMain] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: addUsingPOST_7
+2022-08-23 19:34:36.823  INFO 6620 --- [restartedMain] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: delAllByIdsUsingPOST_6
+2022-08-23 19:34:36.829  INFO 6620 --- [restartedMain] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: editUsingPOST_8
+2022-08-23 19:34:36.860  INFO 6620 --- [restartedMain] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: getAllUsingGET_11
+2022-08-23 19:34:36.863  INFO 6620 --- [restartedMain] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: getByConditionUsingGET_11
+2022-08-23 19:34:36.882  INFO 6620 --- [restartedMain] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: getByConditionUsingGET_12
+2022-08-23 19:34:36.885  INFO 6620 --- [restartedMain] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: delAllByIdsUsingPOST_7
+2022-08-23 19:34:36.896  INFO 6620 --- [restartedMain] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: getUsingGET_11
+2022-08-23 19:34:36.901  INFO 6620 --- [restartedMain] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: saveOrUpdateUsingPOST_5
+2022-08-23 19:34:36.906  INFO 6620 --- [restartedMain] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: getByPageUsingGET_10
+2022-08-23 19:34:36.913  INFO 6620 --- [restartedMain] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: getAllUsingGET_12
+2022-08-23 19:34:36.916  INFO 6620 --- [restartedMain] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: loginUsingGET_5
+2022-08-23 19:34:36.918  INFO 6620 --- [restartedMain] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: delAllByIdsUsingPOST_8
+2022-08-23 19:34:36.922  INFO 6620 --- [restartedMain] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: getUsingGET_12
+2022-08-23 19:34:36.929  INFO 6620 --- [restartedMain] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: saveOrUpdateUsingPOST_6
+2022-08-23 19:34:36.933  INFO 6620 --- [restartedMain] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: getByPageUsingGET_11
+2022-08-23 19:34:36.938  INFO 6620 --- [restartedMain] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: getAllUsingGET_13
+2022-08-23 19:34:36.943  INFO 6620 --- [restartedMain] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: loginUsingGET_6
+2022-08-23 19:34:36.947  INFO 6620 --- [restartedMain] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: callbackUsingGET_2
+2022-08-23 19:34:36.949  INFO 6620 --- [restartedMain] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: loginUsingGET_7
+2022-08-23 19:34:36.951  INFO 6620 --- [restartedMain] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: callbackUsingGET_3
+2022-08-23 19:34:36.953  INFO 6620 --- [restartedMain] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: loginUsingGET_8
+2022-08-23 19:34:36.955  INFO 6620 --- [restartedMain] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: callbackUsingGET_4
+2022-08-23 19:34:37.047  INFO 6620 --- [restartedMain] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
+2022-08-23 19:34:37.055  INFO 6620 --- [restartedMain] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: addUsingPOST_8
+2022-08-23 19:34:37.057  INFO 6620 --- [restartedMain] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: delAllByIdsUsingPOST_9
+2022-08-23 19:34:37.058  INFO 6620 --- [restartedMain] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: disableUsingPOST_1
+2022-08-23 19:34:37.060  INFO 6620 --- [restartedMain] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: editUsingPOST_9
+2022-08-23 19:34:37.079  INFO 6620 --- [restartedMain] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: getByConditionUsingGET_13
+2022-08-23 19:34:37.087  INFO 6620 --- [restartedMain] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: getUserInfoUsingGET_1
+2022-08-23 19:34:37.087  INFO 6620 --- [restartedMain] o.s.m.s.b.SimpleBrokerMessageHandler     : Starting...
+2022-08-23 19:34:37.088  INFO 6620 --- [restartedMain] o.s.m.s.b.SimpleBrokerMessageHandler     : BrokerAvailabilityEvent[available=true, SimpleBrokerMessageHandler [org.springframework.messaging.simp.broker.DefaultSubscriptionRegistry@4c9b2c0e]]
+2022-08-23 19:34:37.088  INFO 6620 --- [restartedMain] o.s.m.s.b.SimpleBrokerMessageHandler     : Started.
+2022-08-23 19:34:37.089  INFO 6620 --- [restartedMain] o.s.s.quartz.SchedulerFactoryBean        : Starting Quartz Scheduler now
+2022-08-23 19:34:37.175  INFO 6620 --- [restartedMain] o.s.s.quartz.LocalDataSourceJobStore     : Freed 0 triggers from 'acquired' / 'blocked' state.
+2022-08-23 19:34:37.222  INFO 6620 --- [restartedMain] o.s.s.quartz.LocalDataSourceJobStore     : Recovering 0 jobs that were in-progress at the time of the last shut-down.
+2022-08-23 19:34:37.222  INFO 6620 --- [restartedMain] o.s.s.quartz.LocalDataSourceJobStore     : Recovery complete.
+2022-08-23 19:34:37.241  INFO 6620 --- [restartedMain] o.s.s.quartz.LocalDataSourceJobStore     : Removed 0 'complete' triggers.
+2022-08-23 19:34:37.263  INFO 6620 --- [restartedMain] o.s.s.quartz.LocalDataSourceJobStore     : Removed 0 stale fired job entries.
+2022-08-23 19:34:37.298  INFO 6620 --- [restartedMain] org.quartz.core.QuartzScheduler          : Scheduler quartzScheduler_$_NON_CLUSTERED started.
+2022-08-23 19:34:37.336  INFO 6620 --- [restartedMain] cn.exrick.xboot.XbootApplication         : Started XbootApplication in 32.002 seconds (JVM running for 37.073)
+2022-08-23 19:34:37.560  INFO 6620 --- [http-nio-8888-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-08-23 19:34:37.560  INFO 6620 --- [http-nio-8888-exec-2] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2022-08-23 19:34:37.566  INFO 6620 --- [http-nio-8888-exec-2] o.s.web.servlet.DispatcherServlet        : Completed initialization in 6 ms
+2022-08-23 19:34:38.622  INFO 6620 --- [registrationTask1] d.c.b.a.c.r.ApplicationRegistrator       : Application registered itself as 9c8f73e1b20a
+2022-08-23 19:34:57.586  INFO 6620 --- [http-nio-8888-exec-8] o.apache.tomcat.util.http.parser.Cookie  : A cookie header was received [Hm_lvt_931a8de1263e8fcdea855e1b3c00abff=1653808074,1654396765] that contained an invalid cookie. That cookie will be ignored.
+ Note: further occurrences of this error will be logged at DEBUG level.
+2022-08-23 19:35:30.716  INFO 6620 --- [MessageBroker-1] o.s.w.s.c.WebSocketMessageBrokerStats    : WebSocketSession[0 current WS(0)-HttpStream(0)-HttpPoll(0), 0 total, 0 closed abnormally (0 connect failure, 0 send limit, 0 transport error)], stompSubProtocol[processed CONNECT(0)-CONNECTED(0)-DISCONNECT(0)], stompBrokerRelay[null], inboundChannel[pool size = 0, active threads = 0, queued tasks = 0, completed tasks = 0], outboundChannel[pool size = 0, active threads = 0, queued tasks = 0, completed tasks = 0], sockJsScheduler[pool size = 2, active threads = 1, queued tasks = 1, completed tasks = 0]
+2022-08-23 19:35:58.903 ERROR 6620 --- [http-nio-8888-exec-24] c.e.x.c.e.RestCtrlExceptionHandler       : org.springframework.jdbc.BadSqlGrammarException: 
+### Error querying database.  Cause: com.mysql.jdbc.exceptions.jdbc4.MySQLSyntaxErrorException: Unknown column 'supportNickName' in 'field list'
+### The error may exist in cn/exrick/xboot/modules/your/mapper/SupportMapper.java (best guess)
+### The error may involve defaultParameterMap
+### The error occurred while setting parameters
+### SQL: SELECT  id,supportNickName,supportUserId,targetCommentId,targetPostId,targetCommentUserId,targetPostUserId,create_by,create_time,update_by,update_time,del_flag  FROM s_support
+### Cause: com.mysql.jdbc.exceptions.jdbc4.MySQLSyntaxErrorException: Unknown column 'supportNickName' in 'field list'
+; bad SQL grammar []; nested exception is com.mysql.jdbc.exceptions.jdbc4.MySQLSyntaxErrorException: Unknown column 'supportNickName' in 'field list'
+
+org.springframework.jdbc.BadSqlGrammarException: 
+### Error querying database.  Cause: com.mysql.jdbc.exceptions.jdbc4.MySQLSyntaxErrorException: Unknown column 'supportNickName' in 'field list'
+### The error may exist in cn/exrick/xboot/modules/your/mapper/SupportMapper.java (best guess)
+### The error may involve defaultParameterMap
+### The error occurred while setting parameters
+### SQL: SELECT  id,supportNickName,supportUserId,targetCommentId,targetPostId,targetCommentUserId,targetPostUserId,create_by,create_time,update_by,update_time,del_flag  FROM s_support
+### Cause: com.mysql.jdbc.exceptions.jdbc4.MySQLSyntaxErrorException: Unknown column 'supportNickName' in 'field list'
+; bad SQL grammar []; nested exception is com.mysql.jdbc.exceptions.jdbc4.MySQLSyntaxErrorException: Unknown column 'supportNickName' in 'field list'
+	at org.springframework.jdbc.support.SQLErrorCodeSQLExceptionTranslator.doTranslate(SQLErrorCodeSQLExceptionTranslator.java:239) ~[spring-jdbc-5.3.20.jar:5.3.20]
+	at org.springframework.jdbc.support.AbstractFallbackSQLExceptionTranslator.translate(AbstractFallbackSQLExceptionTranslator.java:70) ~[spring-jdbc-5.3.20.jar:5.3.20]
+	at org.mybatis.spring.MyBatisExceptionTranslator.translateExceptionIfPossible(MyBatisExceptionTranslator.java:91) ~[mybatis-spring-2.0.6.jar:2.0.6]
+	at org.mybatis.spring.SqlSessionTemplate$SqlSessionInterceptor.invoke(SqlSessionTemplate.java:441) ~[mybatis-spring-2.0.6.jar:2.0.6]
+	at com.sun.proxy.$Proxy203.selectList(Unknown Source) ~[na:na]
+	at org.mybatis.spring.SqlSessionTemplate.selectList(SqlSessionTemplate.java:224) ~[mybatis-spring-2.0.6.jar:2.0.6]
+	at com.baomidou.mybatisplus.core.override.MybatisMapperMethod.executeForMany(MybatisMapperMethod.java:166) ~[mybatis-plus-core-3.5.1.jar:3.5.1]
+	at com.baomidou.mybatisplus.core.override.MybatisMapperMethod.execute(MybatisMapperMethod.java:77) ~[mybatis-plus-core-3.5.1.jar:3.5.1]
+	at com.baomidou.mybatisplus.core.override.MybatisMapperProxy$PlainMethodInvoker.invoke(MybatisMapperProxy.java:148) ~[mybatis-plus-core-3.5.1.jar:3.5.1]
+	at com.baomidou.mybatisplus.core.override.MybatisMapperProxy.invoke(MybatisMapperProxy.java:89) ~[mybatis-plus-core-3.5.1.jar:3.5.1]
+	at com.sun.proxy.$Proxy263.selectList(Unknown Source) ~[na:na]
+	at com.baomidou.mybatisplus.extension.service.IService.list(IService.java:370) ~[mybatis-plus-extension-3.5.1.jar:3.5.1]
+	at com.baomidou.mybatisplus.extension.service.IService.list(IService.java:379) ~[mybatis-plus-extension-3.5.1.jar:3.5.1]
+	at com.baomidou.mybatisplus.extension.service.IService$$FastClassBySpringCGLIB$$f8525d18.invoke(<generated>) ~[mybatis-plus-extension-3.5.1.jar:3.5.1]
+	at org.springframework.cglib.proxy.MethodProxy.invoke(MethodProxy.java:218) ~[spring-core-5.3.20.jar:5.3.20]
+	at org.springframework.aop.framework.CglibAopProxy.invokeMethod(CglibAopProxy.java:386) ~[spring-aop-5.3.20.jar:5.3.20]
+	at org.springframework.aop.framework.CglibAopProxy.access$000(CglibAopProxy.java:85) ~[spring-aop-5.3.20.jar:5.3.20]
+	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:704) ~[spring-aop-5.3.20.jar:5.3.20]
+	at cn.exrick.xboot.modules.your.serviceimpl.ISupportServiceImpl$$EnhancerBySpringCGLIB$$d61d462.list(<generated>) ~[classes/:na]
+	at cn.exrick.xboot.modules.your.controller.SupportController.getAll(SupportController.java:46) ~[classes/:na]
+	at cn.exrick.xboot.modules.your.controller.SupportController$$FastClassBySpringCGLIB$$1a570f90.invoke(<generated>) ~[classes/:na]
+	at org.springframework.cglib.proxy.MethodProxy.invoke(MethodProxy.java:218) ~[spring-core-5.3.20.jar:5.3.20]
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.invokeJoinpoint(CglibAopProxy.java:793) ~[spring-aop-5.3.20.jar:5.3.20]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:163) ~[spring-aop-5.3.20.jar:5.3.20]
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:763) ~[spring-aop-5.3.20.jar:5.3.20]
+	at org.springframework.transaction.interceptor.TransactionInterceptor$1.proceedWithInvocation(TransactionInterceptor.java:123) ~[spring-tx-5.3.20.jar:5.3.20]
+	at org.springframework.transaction.interceptor.TransactionAspectSupport.invokeWithinTransaction(TransactionAspectSupport.java:388) ~[spring-tx-5.3.20.jar:5.3.20]
+	at org.springframework.transaction.interceptor.TransactionInterceptor.invoke(TransactionInterceptor.java:119) ~[spring-tx-5.3.20.jar:5.3.20]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186) ~[spring-aop-5.3.20.jar:5.3.20]
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:763) ~[spring-aop-5.3.20.jar:5.3.20]
+	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:708) ~[spring-aop-5.3.20.jar:5.3.20]
+	at cn.exrick.xboot.modules.your.controller.SupportController$$EnhancerBySpringCGLIB$$3af33f55.getAll(<generated>) ~[classes/:na]
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:1.8.0_333]
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[na:1.8.0_333]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:1.8.0_333]
+	at java.lang.reflect.Method.invoke(Method.java:498) ~[na:1.8.0_333]
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:205) ~[spring-web-5.3.20.jar:5.3.20]
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:150) ~[spring-web-5.3.20.jar:5.3.20]
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:117) ~[spring-webmvc-5.3.20.jar:5.3.20]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:895) ~[spring-webmvc-5.3.20.jar:5.3.20]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:808) ~[spring-webmvc-5.3.20.jar:5.3.20]
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87) ~[spring-webmvc-5.3.20.jar:5.3.20]
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1067) ~[spring-webmvc-5.3.20.jar:5.3.20]
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:963) ~[spring-webmvc-5.3.20.jar:5.3.20]
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006) [spring-webmvc-5.3.20.jar:5.3.20]
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:898) [spring-webmvc-5.3.20.jar:5.3.20]
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:655) [tomcat-embed-core-9.0.63.jar:4.0.FR]
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883) [spring-webmvc-5.3.20.jar:5.3.20]
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:764) [tomcat-embed-core-9.0.63.jar:4.0.FR]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:227) [tomcat-embed-core-9.0.63.jar:9.0.63]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) [tomcat-embed-core-9.0.63.jar:9.0.63]
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53) [tomcat-embed-websocket-9.0.63.jar:9.0.63]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189) [tomcat-embed-core-9.0.63.jar:9.0.63]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) [tomcat-embed-core-9.0.63.jar:9.0.63]
+	at de.codecentric.boot.admin.server.ui.web.servlet.HomepageForwardingFilter.doFilter(HomepageForwardingFilter.java:78) [spring-boot-admin-server-ui-2.6.7.jar:2.6.7]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189) [tomcat-embed-core-9.0.63.jar:9.0.63]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) [tomcat-embed-core-9.0.63.jar:9.0.63]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:111) [spring-web-5.3.20.jar:5.3.20]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189) [tomcat-embed-core-9.0.63.jar:9.0.63]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) [tomcat-embed-core-9.0.63.jar:9.0.63]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:111) [spring-web-5.3.20.jar:5.3.20]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189) [tomcat-embed-core-9.0.63.jar:9.0.63]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) [tomcat-embed-core-9.0.63.jar:9.0.63]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:111) [spring-web-5.3.20.jar:5.3.20]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189) [tomcat-embed-core-9.0.63.jar:9.0.63]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) [tomcat-embed-core-9.0.63.jar:9.0.63]
+	at cn.exrick.xboot.config.security.permission.MyFilterSecurityInterceptor.invoke(MyFilterSecurityInterceptor.java:48) [classes/:na]
+	at cn.exrick.xboot.config.security.permission.MyFilterSecurityInterceptor.doFilter(MyFilterSecurityInterceptor.java:41) [classes/:na]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189) [tomcat-embed-core-9.0.63.jar:9.0.63]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) [tomcat-embed-core-9.0.63.jar:9.0.63]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:327) [spring-security-web-5.5.8.jar:5.5.8]
+	at org.springframework.security.web.access.intercept.FilterSecurityInterceptor.invoke(FilterSecurityInterceptor.java:115) [spring-security-web-5.5.8.jar:5.5.8]
+	at org.springframework.security.web.access.intercept.FilterSecurityInterceptor.doFilter(FilterSecurityInterceptor.java:81) [spring-security-web-5.5.8.jar:5.5.8]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336) [spring-security-web-5.5.8.jar:5.5.8]
+	at cn.exrick.xboot.config.security.permission.MyFilterSecurityInterceptor.invoke(MyFilterSecurityInterceptor.java:48) [classes/:na]
+	at cn.exrick.xboot.config.security.permission.MyFilterSecurityInterceptor.doFilter(MyFilterSecurityInterceptor.java:41) [classes/:na]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336) [spring-security-web-5.5.8.jar:5.5.8]
+	at org.springframework.security.web.access.ExceptionTranslationFilter.doFilter(ExceptionTranslationFilter.java:121) [spring-security-web-5.5.8.jar:5.5.8]
+	at org.springframework.security.web.access.ExceptionTranslationFilter.doFilter(ExceptionTranslationFilter.java:115) [spring-security-web-5.5.8.jar:5.5.8]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336) [spring-security-web-5.5.8.jar:5.5.8]
+	at org.springframework.security.web.session.SessionManagementFilter.doFilter(SessionManagementFilter.java:126) [spring-security-web-5.5.8.jar:5.5.8]
+	at org.springframework.security.web.session.SessionManagementFilter.doFilter(SessionManagementFilter.java:81) [spring-security-web-5.5.8.jar:5.5.8]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336) [spring-security-web-5.5.8.jar:5.5.8]
+	at org.springframework.security.web.authentication.AnonymousAuthenticationFilter.doFilter(AnonymousAuthenticationFilter.java:105) [spring-security-web-5.5.8.jar:5.5.8]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336) [spring-security-web-5.5.8.jar:5.5.8]
+	at org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter.doFilter(SecurityContextHolderAwareRequestFilter.java:149) [spring-security-web-5.5.8.jar:5.5.8]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336) [spring-security-web-5.5.8.jar:5.5.8]
+	at org.springframework.security.web.savedrequest.RequestCacheAwareFilter.doFilter(RequestCacheAwareFilter.java:63) [spring-security-web-5.5.8.jar:5.5.8]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336) [spring-security-web-5.5.8.jar:5.5.8]
+	at cn.exrick.xboot.config.security.jwt.TokenAuthenticationFilter.doFilterInternal(TokenAuthenticationFilter.java:97) [classes/:na]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117) [spring-web-5.3.20.jar:5.3.20]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336) [spring-security-web-5.5.8.jar:5.5.8]
+	at org.springframework.security.web.authentication.AbstractAuthenticationProcessingFilter.doFilter(AbstractAuthenticationProcessingFilter.java:218) [spring-security-web-5.5.8.jar:5.5.8]
+	at org.springframework.security.web.authentication.AbstractAuthenticationProcessingFilter.doFilter(AbstractAuthenticationProcessingFilter.java:212) [spring-security-web-5.5.8.jar:5.5.8]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336) [spring-security-web-5.5.8.jar:5.5.8]
+	at cn.exrick.xboot.config.security.validate.EmailValidateFilter.doFilterInternal(EmailValidateFilter.java:75) [classes/:na]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117) [spring-web-5.3.20.jar:5.3.20]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336) [spring-security-web-5.5.8.jar:5.5.8]
+	at cn.exrick.xboot.config.security.validate.SmsValidateFilter.doFilterInternal(SmsValidateFilter.java:73) [classes/:na]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117) [spring-web-5.3.20.jar:5.3.20]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336) [spring-security-web-5.5.8.jar:5.5.8]
+	at cn.exrick.xboot.config.security.validate.ImageValidateFilter.doFilterInternal(ImageValidateFilter.java:72) [classes/:na]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117) [spring-web-5.3.20.jar:5.3.20]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336) [spring-security-web-5.5.8.jar:5.5.8]
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:103) [spring-security-web-5.5.8.jar:5.5.8]
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:89) [spring-security-web-5.5.8.jar:5.5.8]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336) [spring-security-web-5.5.8.jar:5.5.8]
+	at org.springframework.web.filter.CorsFilter.doFilterInternal(CorsFilter.java:91) [spring-web-5.3.20.jar:5.3.20]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117) [spring-web-5.3.20.jar:5.3.20]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336) [spring-security-web-5.5.8.jar:5.5.8]
+	at org.springframework.security.web.header.HeaderWriterFilter.doHeadersAfter(HeaderWriterFilter.java:90) [spring-security-web-5.5.8.jar:5.5.8]
+	at org.springframework.security.web.header.HeaderWriterFilter.doFilterInternal(HeaderWriterFilter.java:75) [spring-security-web-5.5.8.jar:5.5.8]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117) [spring-web-5.3.20.jar:5.3.20]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336) [spring-security-web-5.5.8.jar:5.5.8]
+	at org.springframework.security.web.context.SecurityContextPersistenceFilter.doFilter(SecurityContextPersistenceFilter.java:110) [spring-security-web-5.5.8.jar:5.5.8]
+	at org.springframework.security.web.context.SecurityContextPersistenceFilter.doFilter(SecurityContextPersistenceFilter.java:80) [spring-security-web-5.5.8.jar:5.5.8]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336) [spring-security-web-5.5.8.jar:5.5.8]
+	at org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter.doFilterInternal(WebAsyncManagerIntegrationFilter.java:55) [spring-security-web-5.5.8.jar:5.5.8]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117) [spring-web-5.3.20.jar:5.3.20]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336) [spring-security-web-5.5.8.jar:5.5.8]
+	at org.springframework.security.web.FilterChainProxy.doFilterInternal(FilterChainProxy.java:211) [spring-security-web-5.5.8.jar:5.5.8]
+	at org.springframework.security.web.FilterChainProxy.doFilter(FilterChainProxy.java:183) [spring-security-web-5.5.8.jar:5.5.8]
+	at org.springframework.web.filter.DelegatingFilterProxy.invokeDelegate(DelegatingFilterProxy.java:354) [spring-web-5.3.20.jar:5.3.20]
+	at org.springframework.web.filter.DelegatingFilterProxy.doFilter(DelegatingFilterProxy.java:267) [spring-web-5.3.20.jar:5.3.20]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189) [tomcat-embed-core-9.0.63.jar:9.0.63]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) [tomcat-embed-core-9.0.63.jar:9.0.63]
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100) [spring-web-5.3.20.jar:5.3.20]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117) [spring-web-5.3.20.jar:5.3.20]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189) [tomcat-embed-core-9.0.63.jar:9.0.63]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) [tomcat-embed-core-9.0.63.jar:9.0.63]
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93) [spring-web-5.3.20.jar:5.3.20]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117) [spring-web-5.3.20.jar:5.3.20]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189) [tomcat-embed-core-9.0.63.jar:9.0.63]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) [tomcat-embed-core-9.0.63.jar:9.0.63]
+	at org.springframework.boot.actuate.metrics.web.servlet.WebMvcMetricsFilter.doFilterInternal(WebMvcMetricsFilter.java:96) [spring-boot-actuator-2.5.14.jar:2.5.14]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117) [spring-web-5.3.20.jar:5.3.20]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189) [tomcat-embed-core-9.0.63.jar:9.0.63]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) [tomcat-embed-core-9.0.63.jar:9.0.63]
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201) [spring-web-5.3.20.jar:5.3.20]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117) [spring-web-5.3.20.jar:5.3.20]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189) [tomcat-embed-core-9.0.63.jar:9.0.63]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) [tomcat-embed-core-9.0.63.jar:9.0.63]
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:197) [tomcat-embed-core-9.0.63.jar:9.0.63]
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:97) [tomcat-embed-core-9.0.63.jar:9.0.63]
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:541) [tomcat-embed-core-9.0.63.jar:9.0.63]
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:135) [tomcat-embed-core-9.0.63.jar:9.0.63]
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92) [tomcat-embed-core-9.0.63.jar:9.0.63]
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78) [tomcat-embed-core-9.0.63.jar:9.0.63]
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:360) [tomcat-embed-core-9.0.63.jar:9.0.63]
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:399) [tomcat-embed-core-9.0.63.jar:9.0.63]
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65) [tomcat-embed-core-9.0.63.jar:9.0.63]
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:890) [tomcat-embed-core-9.0.63.jar:9.0.63]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1743) [tomcat-embed-core-9.0.63.jar:9.0.63]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49) [tomcat-embed-core-9.0.63.jar:9.0.63]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191) [tomcat-embed-core-9.0.63.jar:9.0.63]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659) [tomcat-embed-core-9.0.63.jar:9.0.63]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61) [tomcat-embed-core-9.0.63.jar:9.0.63]
+	at java.lang.Thread.run(Thread.java:750) [na:1.8.0_333]
+Caused by: com.mysql.jdbc.exceptions.jdbc4.MySQLSyntaxErrorException: Unknown column 'supportNickName' in 'field list'
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method) ~[na:1.8.0_333]
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62) ~[na:1.8.0_333]
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45) ~[na:1.8.0_333]
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423) ~[na:1.8.0_333]
+	at com.mysql.jdbc.Util.handleNewInstance(Util.java:403) ~[mysql-connector-java-5.1.49.jar:5.1.49]
+	at com.mysql.jdbc.Util.getInstance(Util.java:386) ~[mysql-connector-java-5.1.49.jar:5.1.49]
+	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:944) ~[mysql-connector-java-5.1.49.jar:5.1.49]
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:3933) ~[mysql-connector-java-5.1.49.jar:5.1.49]
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:3869) ~[mysql-connector-java-5.1.49.jar:5.1.49]
+	at com.mysql.jdbc.MysqlIO.sendCommand(MysqlIO.java:2524) ~[mysql-connector-java-5.1.49.jar:5.1.49]
+	at com.mysql.jdbc.MysqlIO.sqlQueryDirect(MysqlIO.java:2675) ~[mysql-connector-java-5.1.49.jar:5.1.49]
+	at com.mysql.jdbc.ConnectionImpl.execSQL(ConnectionImpl.java:2465) ~[mysql-connector-java-5.1.49.jar:5.1.49]
+	at com.mysql.jdbc.PreparedStatement.executeInternal(PreparedStatement.java:1915) ~[mysql-connector-java-5.1.49.jar:5.1.49]
+	at com.mysql.jdbc.PreparedStatement.execute(PreparedStatement.java:1254) ~[mysql-connector-java-5.1.49.jar:5.1.49]
+	at com.alibaba.druid.filter.FilterChainImpl.preparedStatement_execute(FilterChainImpl.java:3461) ~[druid-1.2.9.jar:1.2.9]
+	at com.alibaba.druid.filter.FilterEventAdapter.preparedStatement_execute(FilterEventAdapter.java:440) ~[druid-1.2.9.jar:1.2.9]
+	at com.alibaba.druid.filter.FilterChainImpl.preparedStatement_execute(FilterChainImpl.java:3459) ~[druid-1.2.9.jar:1.2.9]
+	at com.alibaba.druid.proxy.jdbc.PreparedStatementProxyImpl.execute(PreparedStatementProxyImpl.java:167) ~[druid-1.2.9.jar:1.2.9]
+	at com.alibaba.druid.pool.DruidPooledPreparedStatement.execute(DruidPooledPreparedStatement.java:497) ~[druid-1.2.9.jar:1.2.9]
+	at org.apache.ibatis.executor.statement.PreparedStatementHandler.query(PreparedStatementHandler.java:64) ~[mybatis-3.5.9.jar:3.5.9]
+	at org.apache.ibatis.executor.statement.RoutingStatementHandler.query(RoutingStatementHandler.java:79) ~[mybatis-3.5.9.jar:3.5.9]
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:1.8.0_333]
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[na:1.8.0_333]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:1.8.0_333]
+	at java.lang.reflect.Method.invoke(Method.java:498) ~[na:1.8.0_333]
+	at org.apache.ibatis.plugin.Plugin.invoke(Plugin.java:64) ~[mybatis-3.5.9.jar:3.5.9]
+	at com.sun.proxy.$Proxy354.query(Unknown Source) ~[na:na]
+	at org.apache.ibatis.executor.SimpleExecutor.doQuery(SimpleExecutor.java:63) ~[mybatis-3.5.9.jar:3.5.9]
+	at org.apache.ibatis.executor.BaseExecutor.queryFromDatabase(BaseExecutor.java:325) ~[mybatis-3.5.9.jar:3.5.9]
+	at org.apache.ibatis.executor.BaseExecutor.query(BaseExecutor.java:156) ~[mybatis-3.5.9.jar:3.5.9]
+	at org.apache.ibatis.executor.CachingExecutor.query(CachingExecutor.java:109) ~[mybatis-3.5.9.jar:3.5.9]
+	at com.baomidou.mybatisplus.extension.plugins.MybatisPlusInterceptor.intercept(MybatisPlusInterceptor.java:81) ~[mybatis-plus-extension-3.5.1.jar:3.5.1]
+	at org.apache.ibatis.plugin.Plugin.invoke(Plugin.java:62) ~[mybatis-3.5.9.jar:3.5.9]
+	at com.sun.proxy.$Proxy353.query(Unknown Source) ~[na:na]
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.selectList(DefaultSqlSession.java:151) ~[mybatis-3.5.9.jar:3.5.9]
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.selectList(DefaultSqlSession.java:145) ~[mybatis-3.5.9.jar:3.5.9]
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.selectList(DefaultSqlSession.java:140) ~[mybatis-3.5.9.jar:3.5.9]
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:1.8.0_333]
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[na:1.8.0_333]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:1.8.0_333]
+	at java.lang.reflect.Method.invoke(Method.java:498) ~[na:1.8.0_333]
+	at org.mybatis.spring.SqlSessionTemplate$SqlSessionInterceptor.invoke(SqlSessionTemplate.java:427) ~[mybatis-spring-2.0.6.jar:2.0.6]
+	... 154 common frames omitted
+
+2022-08-23 19:35:58.908  WARN 6620 --- [http-nio-8888-exec-24] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [org.springframework.jdbc.BadSqlGrammarException: <EOL><EOL>### Error querying database.  Cause: com.mysql.jdbc.exceptions.jdbc4.MySQLSyntaxErrorException: Unknown column 'supportNickName' in 'field list'<EOL><EOL>### The error may exist in cn/exrick/xboot/modules/your/mapper/SupportMapper.java (best guess)<EOL><EOL>### The error may involve defaultParameterMap<EOL><EOL>### The error occurred while setting parameters<EOL><EOL>### SQL: SELECT  id,supportNickName,supportUserId,targetCommentId,targetPostId,targetCommentUserId,targetPostUserId,create_by,create_time,update_by,update_time,del_flag  FROM s_support<EOL><EOL>### Cause: com.mysql.jdbc.exceptions.jdbc4.MySQLSyntaxErrorException: Unknown column 'supportNickName' in 'field list'<EOL>; bad SQL grammar []; nested exception is com.mysql.jdbc.exceptions.jdbc4.MySQLSyntaxErrorException: Unknown column 'supportNickName' in 'field list']
+2022-08-23 19:36:06.798  INFO 6620 --- [SpringApplicationShutdownHook] o.s.m.s.b.SimpleBrokerMessageHandler     : Stopping...
+2022-08-23 19:36:06.799  INFO 6620 --- [SpringApplicationShutdownHook] o.s.m.s.b.SimpleBrokerMessageHandler     : BrokerAvailabilityEvent[available=false, SimpleBrokerMessageHandler [org.springframework.messaging.simp.broker.DefaultSubscriptionRegistry@4c9b2c0e]]
+2022-08-23 19:36:06.799  INFO 6620 --- [SpringApplicationShutdownHook] o.s.m.s.b.SimpleBrokerMessageHandler     : Stopped.
+2022-08-23 19:36:06.799  INFO 6620 --- [SpringApplicationShutdownHook] org.quartz.core.QuartzScheduler          : Scheduler quartzScheduler_$_NON_CLUSTERED paused.
+2022-08-23 19:36:06.802  INFO 6620 --- [SpringApplicationShutdownHook] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
+2022-08-23 19:36:08.112  INFO 6620 --- [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
+2022-08-23 19:36:10.391  INFO 6620 --- [SpringApplicationShutdownHook] o.s.s.quartz.SchedulerFactoryBean        : Shutting down Quartz Scheduler
+2022-08-23 19:36:10.391  INFO 6620 --- [SpringApplicationShutdownHook] org.quartz.core.QuartzScheduler          : Scheduler quartzScheduler_$_NON_CLUSTERED shutting down.
+2022-08-23 19:36:10.391  INFO 6620 --- [SpringApplicationShutdownHook] org.quartz.core.QuartzScheduler          : Scheduler quartzScheduler_$_NON_CLUSTERED paused.
+2022-08-23 19:36:10.393  INFO 6620 --- [SpringApplicationShutdownHook] org.quartz.core.QuartzScheduler          : Scheduler quartzScheduler_$_NON_CLUSTERED shutdown complete.
+2022-08-23 19:36:10.408  INFO 6620 --- [SpringApplicationShutdownHook] o.a.e.i.a.AbstractAsyncJobExecutor       : Shutting down the default async job executor [org.activiti.spring.SpringAsyncExecutor].
+2022-08-23 19:36:10.408  INFO 6620 --- [Thread-45] o.a.e.i.a.AcquireTimerJobsRunnable       : stopped async job due acquisition
+2022-08-23 19:36:10.408  INFO 6620 --- [Thread-46] o.a.e.i.a.AcquireAsyncJobsDueRunnable    : stopped async job due acquisition
+2022-08-23 19:36:10.459  INFO 6620 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2022-08-23 19:36:10.463  INFO 6620 --- [SpringApplicationShutdownHook] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} closing ...
+2022-08-23 19:36:10.471  INFO 6620 --- [SpringApplicationShutdownHook] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} closed

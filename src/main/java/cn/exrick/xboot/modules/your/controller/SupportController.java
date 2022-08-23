@@ -33,10 +33,10 @@ public class SupportController {
 
     @RequestMapping(value = "/get/{id}", method = RequestMethod.GET)
     @ApiOperation(value = "通过id获取")
-    public Result<Support> get(@PathVariable long id) {
-
-        Support support = iSupportService.getById(id);
-        return new ResultUtil<Support>().setData(support);
+    public Result<List<Support>> get(@PathVariable String id) {
+        List<Support> supports = iSupportService.selectAllSupportById(id);
+        //Support support = iSupportService.getById(id);
+        return new ResultUtil<List<Support>>().setData(supports);
     }
 
     @RequestMapping(value = "/getAll", method = RequestMethod.GET)

@@ -23,4 +23,10 @@ public class ISupportServiceImpl extends ServiceImpl<SupportMapper, Support> imp
 
     @Autowired
     private SupportMapper supportMapper;
+
+    @Override
+    public List<Support> selectAllSupportById(String id) {
+        List<Support> supports = supportMapper.selectAllSupportById(id);
+        return supports;
+    }
 }
