@@ -4,9 +4,8 @@ import cn.exrick.xboot.common.utils.PageUtil;
 import cn.exrick.xboot.common.utils.ResultUtil;
 import cn.exrick.xboot.common.vo.PageVo;
 import cn.exrick.xboot.common.vo.Result;
-import cn.exrick.xboot.modules.your.entity.Post;
-import cn.exrick.xboot.modules.your.service.IPostService;
-import cn.exrick.xboot.modules.your.vo.PostVO;
+import cn.exrick.xboot.modules.your.entity.Support;
+import cn.exrick.xboot.modules.your.service.ISupportService;
 import cn.hutool.core.util.StrUtil;
 import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
 import com.baomidou.mybatisplus.core.metadata.IPage;
@@ -24,55 +23,46 @@ import java.util.List;
  */
 @Slf4j
 @RestController
-@Api(tags = "帖子信息表管理接口")
-@RequestMapping("/xboot/post")
+@Api(tags = "点赞信息管理接口")
+@RequestMapping("/xboot/support")
 @Transactional
-@CrossOrigin
-public class PostController {
+public class SupportController {
 
     @Autowired
-    private IPostService iPostService;
+    private ISupportService iSupportService;
 
     @RequestMapping(value = "/get/{id}", method = RequestMethod.GET)
     @ApiOperation(value = "通过id获取")
-    public Result<List<Post>> get(@PathVariable String id) {
+    public Result<Support> get(@PathVariable long id) {
 
-        List<Post> posts = iPostService.selectAllPostById(id);
-        return new ResultUtil<List<Post>>().setData(posts);
-    }
-    //主界面获取的全部数据
-    @RequestMapping(value = "/getMainAll", method = RequestMethod.POST)
-    @ApiOperation(value = "获取全部主界面数据")
-    public Result<List<PostVO>> selectPostInnerId() {
-
-        List<PostVO> postVOS = iPostService.selectPostInnerId();
-        return new ResultUtil<List<PostVO>>().setData(postVOS);
+        Support support = iSupportService.getById(id);
+        return new ResultUtil<Support>().setData(support);
     }
 
     @RequestMapping(value = "/getAll", method = RequestMethod.GET)
     @ApiOperation(value = "获取全部数据")
-    public Result<List<Post>> getAll() {
+    public Result<List<Support>> getAll() {
 
-        List<Post> list = iPostService.selectAllPost();
-        return new ResultUtil<List<Post>>().setData(list);
+        List<Support> list = iSupportService.list();
+        return new ResultUtil<List<Support>>().setData(list);
     }
 
     @RequestMapping(value = "/getByPage", method = RequestMethod.GET)
     @ApiOperation(value = "分页获取")
-    public Result<IPage<Post>> getByPage(PageVo page) {
+    public Result<IPage<Support>> getByPage(PageVo page) {
 
-        IPage<Post> data = iPostService.page(PageUtil.initMpPage(page));
-        return new ResultUtil<IPage<Post>>().setData(data);
+        IPage<Support> data = iSupportService.page(PageUtil.initMpPage(page));
+        return new ResultUtil<IPage<Support>>().setData(data);
     }
 
     @RequestMapping(value = "/insertOrUpdate", method = RequestMethod.POST)
     @ApiOperation(value = "编辑或更新数据")
-    public Result<Post> saveOrUpdate(Post post) {
+    public Result<Support> saveOrUpdate(Support support) {
 
-        if (iPostService.saveOrUpdate(post)) {
-            return new ResultUtil<Post>().setData(post);
+        if (iSupportService.saveOrUpdate(support)) {
+            return new ResultUtil<Support>().setData(support);
         }
-        return new ResultUtil<Post>().setErrorMsg("操作失败");
+        return new ResultUtil<Support>().setErrorMsg("操作失败");
     }
 
     @RequestMapping(value = "/delByIds", method = RequestMethod.POST)
@@ -80,7 +70,7 @@ public class PostController {
     public Result delAllByIds(@RequestParam long[] ids) {
 
         for (long id : ids) {
-            iPostService.removeById(id);
+            iSupportService.removeById(id);
         }
         return ResultUtil.success("批量通过id删除数据成功");
     }

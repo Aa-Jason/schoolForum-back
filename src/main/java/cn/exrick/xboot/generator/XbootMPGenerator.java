@@ -34,13 +34,13 @@ public class XbootMPGenerator {
      * 实体类名
      * 建议仅需修改
      */
-    private static final String CLASS_NAME = "Answer";
+    private static final String CLASS_NAME = "Support";
 
     /**
      * 类说明描述
      * 建议仅需修改
      */
-    private static final String DESCRIPTION = "评论回复信息";
+    private static final String DESCRIPTION = "点赞信息";
 
     /**
      * 作者名
