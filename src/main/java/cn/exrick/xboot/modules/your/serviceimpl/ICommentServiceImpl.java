@@ -23,4 +23,10 @@ public class ICommentServiceImpl extends ServiceImpl<CommentMapper, Comment> imp
 
     @Autowired
     private CommentMapper commentMapper;
+
+    @Override
+    public List<Comment> selectAllCommentById(String id) {
+        List<Comment> comments = commentMapper.selectAllCommentById(id);
+        return comments;
+    }
 }

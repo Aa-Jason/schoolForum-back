@@ -1,4 +1,5 @@
 # 配置文件加密key 生产环境中可通过环境变量、命令行等形式进行设置
+# http://localhost:8888/doc.html
 jasypt:
   encryptor:
     password: xboot

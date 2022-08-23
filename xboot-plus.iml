@@ -33,7 +33,7 @@
             <entry key="lastExternalPluginCheckTime" value="1660823622865" />
           </map>
         </option>
-        <option name="version" value="9" />
+        <option name="version" value="10" />
       </configuration>
     </facet>
   </component>
@@ -120,7 +120,6 @@
     <orderEntry type="library" name="Maven: com.sun.activation:jakarta.activation:1.2.2" level="project" />
     <orderEntry type="library" name="Maven: com.alibaba:druid-spring-boot-starter:1.2.9" level="project" />
     <orderEntry type="library" name="Maven: com.alibaba:druid:1.2.9" level="project" />
-    <orderEntry type="library" name="Maven: javax.annotation:javax.annotation-api:1.3.2" level="project" />
     <orderEntry type="library" name="Maven: org.slf4j:slf4j-api:1.7.36" level="project" />
     <orderEntry type="library" name="Maven: org.springframework.boot:spring-boot-autoconfigure:2.5.14" level="project" />
     <orderEntry type="library" name="Maven: org.springframework.boot:spring-boot-starter-quartz:2.5.14" level="project" />

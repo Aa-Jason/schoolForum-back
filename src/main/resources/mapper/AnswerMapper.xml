@@ -2,7 +2,7 @@
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="cn.exrick.xboot.modules.your.mapper.AnswerMapper">
     <resultMap id="BaseResultMap" type="cn.exrick.xboot.modules.your.entity.Answer">
-        <id column="id" jdbcType="INTEGER" property="Id" />
+        <id column="id" jdbcType="INTEGER" property="id" />
         <result column="create_by" jdbcType="VARCHAR" property="createBy" />
         <result column="create_time" jdbcType="INTEGER" property="createTime" />
         <result column="del_flag" jdbcType="INTEGER" property="delFlag" />
@@ -14,5 +14,20 @@
         <result column="target_answer_id" jdbcType="VARCHAR" property="targetAnswerId" />
         <result column="target_user_id" jdbcType="VARCHAR" property="targetUserId" />
     </resultMap>
-
+    <!--通过id进行查询-->
+    <select id="selectAllAnswerById" resultMap="BaseResultMap">
+        select
+            id,
+            create_by,
+            create_time,
+            del_flag,
+            update_by,
+            update_time,
+            answer_content,
+            answer_user_id,
+            comment_id,
+            target_answer_id,
+            target_user_id
+        from s_answer where id=#{id}
+    </select>
 </mapper>

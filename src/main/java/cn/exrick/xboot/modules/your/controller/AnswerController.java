@@ -33,10 +33,10 @@ public class AnswerController {
 
     @RequestMapping(value = "/get/{id}", method = RequestMethod.GET)
     @ApiOperation(value = "通过id获取")
-    public Result<Answer> get(@PathVariable long id) {
-
-        Answer answer = iAnswerService.getById(id);
-        return new ResultUtil<Answer>().setData(answer);
+    public Result<List<Answer>> get(@PathVariable String id) {
+        List<Answer> answers = iAnswerService.selectAllAnswerById(id);
+        //Answer answer = iAnswerService.getById(id);
+        return new ResultUtil<List<Answer>>().setData(answers);
     }
 
     @RequestMapping(value = "/getAll", method = RequestMethod.GET)

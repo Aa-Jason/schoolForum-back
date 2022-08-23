@@ -33,10 +33,9 @@ public class CommentController {
 
     @RequestMapping(value = "/get/{id}", method = RequestMethod.GET)
     @ApiOperation(value = "通过id获取")
-    public Result<Comment> get(@PathVariable long id) {
-
-        Comment comment = iCommentService.getById(id);
-        return new ResultUtil<Comment>().setData(comment);
+    public Result<List<Comment>> get(@PathVariable String id) {
+        List<Comment> comments = iCommentService.selectAllCommentById(id);
+        return new ResultUtil<List<Comment>>().setData(comments);
     }
 
     @RequestMapping(value = "/getAll", method = RequestMethod.GET)

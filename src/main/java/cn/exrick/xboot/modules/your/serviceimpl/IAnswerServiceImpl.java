@@ -23,4 +23,10 @@ public class IAnswerServiceImpl extends ServiceImpl<AnswerMapper, Answer> implem
 
     @Autowired
     private AnswerMapper answerMapper;
+
+    @Override
+    public List<Answer> selectAllAnswerById(String id) {
+        List<Answer> answers = answerMapper.selectAllAnswerById(id);
+        return answers;
+    }
 }
