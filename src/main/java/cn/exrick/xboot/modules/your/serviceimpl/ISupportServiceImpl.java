@@ -1,5 +1,6 @@
 package cn.exrick.xboot.modules.your.serviceimpl;
 
+import cn.exrick.xboot.modules.your.entity.UserInfo;
 import cn.exrick.xboot.modules.your.mapper.SupportMapper;
 import cn.exrick.xboot.modules.your.entity.Support;
 import cn.exrick.xboot.modules.your.service.ISupportService;
@@ -23,4 +24,29 @@ public class ISupportServiceImpl extends ServiceImpl<SupportMapper, Support> imp
 
     @Autowired
     private SupportMapper supportMapper;
+
+    @Override
+    public List<Support> getInfo(long id) {
+
+        List<Support> info = supportMapper.getInfo(id);
+        return info;
+    }
+
+    @Override
+    public List<Support> getPost(String postId) {
+        List<Support> info = supportMapper.getPost(postId);
+        return info;
+    }
+
+    @Override
+    public List<Support> getUserInfo(String userId) {
+        List<Support> info = supportMapper.getUserInfo(userId);
+        return info;
+    }
+
+    @Override
+    public List<Support> getCommentInfo(String commentId) {
+        List<Support> info = supportMapper.getCommentInfo(commentId);
+        return info;
+    }
 }

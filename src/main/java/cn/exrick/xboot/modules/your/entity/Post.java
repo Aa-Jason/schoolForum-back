@@ -47,6 +47,10 @@ public class Post extends XbootBaseEntity {
     @TableField("userId")
     private String userId;
 
+    @ApiModelProperty(value = "发帖人昵称")
+    @TableField("nickName")
+    private String nickName;
+
     @ApiModelProperty(value = "帖子点赞数")
     @TableField("supportCount")
     private String supportCount;

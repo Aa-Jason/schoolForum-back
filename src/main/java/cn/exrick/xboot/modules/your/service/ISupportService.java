@@ -11,4 +11,11 @@ import java.util.List;
  */
 public interface ISupportService extends IService<Support> {
 
+    List<Support> getInfo(long id);
+
+    List<Support> getPost(String postId);
+
+    List<Support> getUserInfo(String userId);
+
+    List<Support> getCommentInfo(String commentId);
 }
