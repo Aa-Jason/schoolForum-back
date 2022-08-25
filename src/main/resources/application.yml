@@ -259,6 +259,8 @@ captcha:
 ignored:
   # 无需登录认证的请求
   urls:
+    - /xboot/comment/**
+    - /xboot/answer/**
     - /xboot/support/**
     - /xboot/userInfo/**
     - /xboot/post/**

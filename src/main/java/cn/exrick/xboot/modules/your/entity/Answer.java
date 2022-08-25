@@ -31,6 +31,10 @@ public class Answer extends XbootBaseEntity {
     @TableField("answerUserId")
     private String answerUserId;
 
+    @ApiModelProperty(value = "发表回复人的昵称")
+    @TableField("nickName")
+    private String nickName;
+
     @ApiModelProperty(value = "评论的Id")
     @TableField("commentId")
     private String commentId;
@@ -46,5 +50,9 @@ public class Answer extends XbootBaseEntity {
     @ApiModelProperty(value = "目标回复id")
     @TableField("targetAnswerId")
     private String targetAnswerId;
+
+    @ApiModelProperty(value = "所在帖子Id")
+    @TableField("targetPostId")
+    private String targetPostId;
 
 }

@@ -31,6 +31,10 @@ public class Comment extends XbootBaseEntity {
     @TableField("postId")
     private String postId;
 
+    @ApiModelProperty(value = "帖子所有者id")
+    @TableField("postUserId")
+    private String postUserId;
+
     @ApiModelProperty(value = "评论人id")
     @TableField("commentUserId")
     private String commentUserId;

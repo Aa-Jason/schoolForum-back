@@ -1,5 +1,7 @@
 package cn.exrick.xboot.modules.your.serviceimpl;
 
+import cn.exrick.xboot.modules.your.entity.Post;
+import cn.exrick.xboot.modules.your.entity.UserInfo;
 import cn.exrick.xboot.modules.your.mapper.CommentMapper;
 import cn.exrick.xboot.modules.your.entity.Comment;
 import cn.exrick.xboot.modules.your.service.ICommentService;
@@ -23,4 +25,23 @@ public class ICommentServiceImpl extends ServiceImpl<CommentMapper, Comment> imp
 
     @Autowired
     private CommentMapper commentMapper;
+
+
+    @Override
+    public List<Comment> getInfo(long id) {
+        List<Comment> info = commentMapper.getInfo(id);
+        return info;
+    }
+
+    @Override
+    public List<Post> getPost(String postId) {
+        List<Post> info = commentMapper.getPost(postId);
+        return info;
+    }
+
+    @Override
+    public List<UserInfo> getUserInfo(String userId) {
+        List<UserInfo> info = commentMapper.getUserInfo(userId);
+        return info;
+    }
 }
