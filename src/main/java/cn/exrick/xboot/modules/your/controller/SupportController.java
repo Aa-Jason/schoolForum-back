@@ -66,7 +66,7 @@ public class SupportController {
     @ApiImplicitParams({
             @ApiImplicitParam(dataType = "long",name="userid",value="用户id",required = true),
     })
-    @RequestMapping(value = "/getPostSupport", method = RequestMethod.GET)
+    @RequestMapping(value = "/getPostSupport", method = RequestMethod.POST)
     public Result<List> getPostSupport(@RequestParam("userid") long userid) {
         List<Support> support = iSupportService.getInfo(userid);
         List result = new ArrayList();
@@ -89,7 +89,7 @@ public class SupportController {
     @ApiImplicitParams({
             @ApiImplicitParam(dataType = "long",name="userid",value="用户id",required = true),
     })
-    @RequestMapping(value = "/getCommentSupport", method = RequestMethod.GET)
+    @RequestMapping(value = "/getCommentSupport", method = RequestMethod.POST)
     public Result<List> getCommentSupport(@RequestParam("userid") long userid) {
         List<Support> sup = iSupportService.getInfo(userid);
         List result = new ArrayList();

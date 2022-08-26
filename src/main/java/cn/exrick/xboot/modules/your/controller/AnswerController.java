@@ -72,7 +72,7 @@ public class AnswerController {
     @ApiImplicitParams({
             @ApiImplicitParam(dataType = "long",name="userid",value="用户id",required = true),
     })
-    @RequestMapping(value = "/getAnswerToComment", method = RequestMethod.GET)
+    @RequestMapping(value = "/getAnswerToComment", method = RequestMethod.POST)
     public Result<List> getAnswerToComment(@RequestParam("userid") long userid) {
         List<Answer> answer = iAnswerService.getInfo(userid);
         List result = new ArrayList();
@@ -97,7 +97,7 @@ public class AnswerController {
     @ApiImplicitParams({
             @ApiImplicitParam(dataType = "long",name="userid",value="用户id",required = true),
     })
-    @RequestMapping(value = "/getAnswerToAnswer", method = RequestMethod.GET)
+    @RequestMapping(value = "/getAnswerToAnswer", method = RequestMethod.POST)
     public Result<List> getAnswerToAnswer(@RequestParam("userid") long userid) {
         List<Answer> answer = iAnswerService.getInfo(userid);
         List result = new ArrayList();

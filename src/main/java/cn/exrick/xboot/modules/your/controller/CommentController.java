@@ -56,7 +56,7 @@ public class CommentController {
     @ApiImplicitParams({
             @ApiImplicitParam(dataType = "long",name="userid",value="用户id",required = true),
     })
-    @RequestMapping(value = "/getPostComment", method = RequestMethod.GET)
+    @RequestMapping(value = "/getPostComment", method = RequestMethod.POST)
     public Result<List> getPostComment(@RequestParam("userid") long userid) {
         List<Comment> comment = iCommentService.getInfo(userid);
         int a = comment.size();
