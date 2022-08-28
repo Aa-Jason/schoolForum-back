@@ -39,8 +39,8 @@ public class IPostServiceImpl extends ServiceImpl<PostMapper, Post> implements I
     }
 
     @Override
-    public List<PostVO> selectPostInnerId() {
-        List<PostVO> postVOS = postMapper.selectPostInnerId();
+    public List<PostVO> selectPostInnerId(int num,int part) {
+        List<PostVO> postVOS = postMapper.selectPostInnerId(num,part);
         return postVOS;
     }
 

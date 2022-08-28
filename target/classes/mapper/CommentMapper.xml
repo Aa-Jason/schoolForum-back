@@ -17,6 +17,7 @@
     <select id="getInfo" resultType="cn.exrick.xboot.modules.your.entity.Comment">
         select * from s_comment
         where post_user_id=#{id}
+        order by create_time desc
     </select>
     <select id="getPost" resultType="cn.exrick.xboot.modules.your.entity.Post">
         select post_title,nick_name,id

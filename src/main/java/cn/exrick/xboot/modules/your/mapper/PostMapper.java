@@ -18,5 +18,5 @@ public interface PostMapper extends BaseMapper<Post> {
     public List<Post> selectAllPostById(String id);
 
 
-    public List<PostVO> selectPostInnerId();
+    List<PostVO> selectPostInnerId(int num, int part);
 }

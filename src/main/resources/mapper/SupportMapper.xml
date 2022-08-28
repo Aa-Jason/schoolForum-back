@@ -72,6 +72,7 @@
         select * from s_support
         where (target_post_user_id=#{id}
         or target_comment_user_id=#{id})
+        order by create_time desc
     </select>
 
     <select id="getPost" resultMap="PostVOMap">

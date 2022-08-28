@@ -2,98 +2,108 @@
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="cn.exrick.xboot.modules.your.mapper.PostMapper">
     <resultMap id="BaseResultMap" type="cn.exrick.xboot.modules.your.entity.Post">
-        <id column="id" jdbcType="INTEGER" property="id" />
-        <result column="create_by" jdbcType="VARCHAR" property="createBy" />
-        <result column="create_time" jdbcType="INTEGER" property="createTime" />
-        <result column="del_flag" jdbcType="INTEGER" property="delFlag" />
-        <result column="update_by" jdbcType="VARCHAR" property="updateBy" />
-        <result column="update_time" jdbcType="VARCHAR" property="updateTime" />
-        <result column="comment_count" jdbcType="VARCHAR" property="commentCount" />
-        <result column="post_content" jdbcType="VARCHAR" property="postContent" />
-        <result column="post_part" jdbcType="VARCHAR" property="postPart" />
-        <result column="post_picture" jdbcType="VARCHAR" property="postPicture" />
-        <result column="post_title" jdbcType="VARCHAR" property="postTitle" />
-        <result column="support_count" jdbcType="VARCHAR" property="supportCount" />
-        <result column="user_id" jdbcType="VARCHAR" property="userId" />
+        <id column="id" jdbcType="INTEGER" property="id"/>
+        <result column="create_by" jdbcType="VARCHAR" property="createBy"/>
+        <result column="create_time" jdbcType="INTEGER" property="createTime"/>
+        <result column="del_flag" jdbcType="INTEGER" property="delFlag"/>
+        <result column="update_by" jdbcType="VARCHAR" property="updateBy"/>
+        <result column="update_time" jdbcType="VARCHAR" property="updateTime"/>
+        <result column="comment_count" jdbcType="VARCHAR" property="commentCount"/>
+        <result column="post_content" jdbcType="VARCHAR" property="postContent"/>
+        <result column="post_part" jdbcType="VARCHAR" property="postPart"/>
+        <result column="post_picture" jdbcType="VARCHAR" property="postPicture"/>
+        <result column="post_title" jdbcType="VARCHAR" property="postTitle"/>
+        <result column="support_count" jdbcType="VARCHAR" property="supportCount"/>
+        <result column="user_id" jdbcType="VARCHAR" property="userId"/>
     </resultMap>
 
     <resultMap id="PostVOMap" type="cn.exrick.xboot.modules.your.vo.PostVO">
-        <id column="id" jdbcType="INTEGER" property="id" />
-        <result column="create_by" jdbcType="VARCHAR" property="createBy" />
-        <result column="create_time" jdbcType="INTEGER" property="createTime" />
-        <result column="del_flag" jdbcType="INTEGER" property="delFlag" />
-        <result column="update_by" jdbcType="VARCHAR" property="updateBy" />
-        <result column="update_time" jdbcType="VARCHAR" property="updateTime" />
-        <result column="comment_count" jdbcType="VARCHAR" property="commentCount" />
-        <result column="post_content" jdbcType="VARCHAR" property="postContent" />
-        <result column="post_part" jdbcType="VARCHAR" property="postPart" />
-        <result column="post_picture" jdbcType="VARCHAR" property="postPicture" />
-        <result column="post_title" jdbcType="VARCHAR" property="postTitle" />
-        <result column="support_count" jdbcType="VARCHAR" property="supportCount" />
-        <result column="user_id" jdbcType="VARCHAR" property="userId" />
+        <id column="id" jdbcType="INTEGER" property="id"/>
+        <result column="create_by" jdbcType="VARCHAR" property="createBy"/>
+        <result column="create_time" jdbcType="INTEGER" property="createTime"/>
+        <result column="del_flag" jdbcType="INTEGER" property="delFlag"/>
+        <result column="update_by" jdbcType="VARCHAR" property="updateBy"/>
+        <result column="update_time" jdbcType="VARCHAR" property="updateTime"/>
+        <result column="comment_count" jdbcType="VARCHAR" property="commentCount"/>
+        <result column="post_content" jdbcType="VARCHAR" property="postContent"/>
+        <result column="post_part" jdbcType="VARCHAR" property="postPart"/>
+        <result column="post_picture" jdbcType="VARCHAR" property="postPicture"/>
+        <result column="post_title" jdbcType="VARCHAR" property="postTitle"/>
+        <result column="support_count" jdbcType="VARCHAR" property="supportCount"/>
+        <result column="user_id" jdbcType="VARCHAR" property="userId"/>
 
-        <result column="nick_name" jdbcType="VARCHAR" property="nickName" />
-        <result column="avatar" jdbcType="VARCHAR" property="avatar" />
-        <result column="id" jdbcType="VARCHAR" property="id" />
+        <result column="nick_name" jdbcType="VARCHAR" property="nickName"/>
+        <result column="avatar" jdbcType="VARCHAR" property="avatar"/>
+        <result column="id" jdbcType="VARCHAR" property="id"/>
     </resultMap>
 
     <select id="selectPostInnerId" resultMap="PostVOMap">
-        select
-            u.nick_name,
-            u.avatar,
-            p.id,
-            p.create_by,
-            p.create_time,
-            p.del_flag,
-            p.update_by,
-            p.update_time,
-            p.comment_count,
-            p.post_content,
-            p.post_part,
-            p.post_picture,
-            p.post_title,
-            p.support_count,
-            p.user_id
+        select u.nick_name,
+               u.avatar,
+               p.id,
+               p.create_by,
+               p.create_time,
+               p.del_flag,
+               p.update_by,
+               p.update_time,
+               p.comment_count,
+               p.post_content,
+               p.post_part,
+               p.post_picture,
+               p.post_title,
+               p.support_count,
+               p.user_id
         from s_post p
                  INNER JOIN s_user_info u
-                            ON u.id=p.user_id
+                            ON u.id = p.user_id
+        where if(#{part} = 1,
+                 (p.post_part = '恋爱交友' or p.post_part = '求助答疑' or p.post_part = '求职招聘' or p.post_part = '瓜田趣事'), 1 = 1)
+           or if(#{part} = 2, p.post_part = '恋爱交友', 1 = 1)
+           or if(#{part} = 3, p.post_part = '求助答疑', 1 = 1)
+           or if(#{part} = 4, p.post_part = '求职招聘', 1 = 1)
+           or if(#{part} = 5, p.post_part = '瓜田趣事', 1 = 1)
+           or if(#{part} = 6, p.post_part = '手机数码', 1 = 1)
+           or if(#{part} = 7, p.post_part = '运动户外', 1 = 1)
+           or if(#{part} = 8, p.post_part = '衣物饰品', 1 = 1)
+           or if(#{part} = 9, p.post_part = '生活用品', 1 = 1)
+           or if(#{part} = 10, p.post_part = '文具书籍', 1 = 1)
         order by create_time desc
+            limit #{num}
     </select>
-<!--查询所有信息-->
+    <!--查询所有信息-->
     <select id="selectAllPost" resultMap="BaseResultMap">
-        select
-            id,
-            create_by,
-            create_time,
-            del_flag,
-            update_by,
-            update_time,
-            comment_count,
-            post_content,
-            post_part,
-            post_picture,
-            post_title,
-            support_count,
-            user_id
+        select id,
+               create_by,
+               create_time,
+               del_flag,
+               update_by,
+               update_time,
+               comment_count,
+               post_content,
+               post_part,
+               post_picture,
+               post_title,
+               support_count,
+               user_id
         from s_post
         order by create_time desc
     </select>
-<!--通过id进行查询-->
+    <!--通过id进行查询-->
     <select id="selectAllPostById" resultMap="BaseResultMap">
-        select
-        create_by,
-        create_time,
-        del_flag,
-        update_by,
-        update_time,
-        comment_count,
-        post_content,
-        post_part,
-        post_picture,
-        post_title,
-        support_count,
-        user_id
-        from s_post where id=#{id}
+        select create_by,
+               create_time,
+               del_flag,
+               update_by,
+               update_time,
+               comment_count,
+               post_content,
+               post_part,
+               post_picture,
+               post_title,
+               support_count,
+               user_id
+        from s_post
+        where id = #{id}
     </select>
 
 </mapper>

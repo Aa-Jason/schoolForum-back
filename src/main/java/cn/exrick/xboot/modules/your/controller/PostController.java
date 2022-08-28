@@ -11,6 +11,8 @@ import cn.hutool.core.util.StrUtil;
 import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
 import com.baomidou.mybatisplus.core.metadata.IPage;
 import io.swagger.annotations.Api;
+import io.swagger.annotations.ApiImplicitParam;
+import io.swagger.annotations.ApiImplicitParams;
 import io.swagger.annotations.ApiOperation;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -40,12 +42,19 @@ public class PostController {
         List<Post> posts = iPostService.selectAllPostById(id);
         return new ResultUtil<List<Post>>().setData(posts);
     }
-    //主界面获取的全部数据
-    @RequestMapping(value = "/getMainAll", method = RequestMethod.POST)
-    @ApiOperation(value = "获取全部主界面数据")
-    public Result<List<PostVO>> selectPostInnerId() {
 
-        List<PostVO> postVOS = iPostService.selectPostInnerId();
+
+    //主界面获取的全部数据
+    @RequestMapping(value = "/getPostInfo", method = RequestMethod.POST)
+    @ApiImplicitParams({
+            @ApiImplicitParam(dataType = "int",name="page",value="页数",required = true),
+            @ApiImplicitParam(dataType = "int",name="part",value="分区",required = true),
+    })
+    @ApiOperation(value = "分页按分区获取帖子数据")
+    public Result<List<PostVO>> selectPostInnerId(@RequestParam("page") int page,@RequestParam("part" ) int part) {
+        int num = 10*page;
+        List<PostVO> postVOS = iPostService.selectPostInnerId(num,part);
+
         return new ResultUtil<List<PostVO>>().setData(postVOS);
     }
 

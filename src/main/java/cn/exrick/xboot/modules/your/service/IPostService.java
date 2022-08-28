@@ -17,5 +17,5 @@ public interface IPostService extends IService<Post> {
 
     public List<Post> selectAllPostById(String id);
 
-    public List<PostVO> selectPostInnerId();
+    public List<PostVO> selectPostInnerId(int num,int part);
 }
