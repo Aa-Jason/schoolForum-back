@@ -55,18 +55,20 @@
                p.user_id
         from s_post p
                  INNER JOIN s_user_info u
-                            ON u.id = p.user_id
-        where if(#{part} = 1,
-                 (p.post_part = '恋爱交友' or p.post_part = '求助答疑' or p.post_part = '求职招聘' or p.post_part = '瓜田趣事'), 1 = 1)
-           or if(#{part} = 2, p.post_part = '恋爱交友', 1 = 1)
-           or if(#{part} = 3, p.post_part = '求助答疑', 1 = 1)
-           or if(#{part} = 4, p.post_part = '求职招聘', 1 = 1)
-           or if(#{part} = 5, p.post_part = '瓜田趣事', 1 = 1)
-           or if(#{part} = 6, p.post_part = '手机数码', 1 = 1)
-           or if(#{part} = 7, p.post_part = '运动户外', 1 = 1)
-           or if(#{part} = 8, p.post_part = '衣物饰品', 1 = 1)
-           or if(#{part} = 9, p.post_part = '生活用品', 1 = 1)
-           or if(#{part} = 10, p.post_part = '文具书籍', 1 = 1)
+                            ON u.id = p.user_id where p.del_flag = 0
+                                  and u.del_flag = 0
+                                  and (if(#{part} = 1,
+                                          (p.post_part = '恋爱交友' or p.post_part = '求助答疑' or p.post_part = '求职招聘' or p.post_part = '瓜田趣事'), p.post_part='无')
+                                    or if(#{part} = 2, p.post_part = '恋爱交友', p.post_part = '无')
+                                    or if(#{part} = 3, p.post_part = '求助答疑', p.post_part = '无')
+                                    or if(#{part} = 4, p.post_part = '求职招聘', p.post_part = '无')
+                                    or if(#{part} = 5, p.post_part = '瓜田趣事', p.post_part = '无')
+                                    or if(#{part} = 6, p.post_part = '手机数码', p.post_part = '无')
+                                    or if(#{part} = 7, p.post_part = '运动户外', p.post_part = '无')
+                                    or if(#{part} = 8, p.post_part = '衣物饰品', p.post_part = '无')
+                                    or if(#{part} = 9, p.post_part = '生活用品', p.post_part = '无')
+                                    or if(#{part} = 10, p.post_part = '文具书籍', p.post_part = '无'))
+
         order by create_time desc
             limit #{num}
     </select>

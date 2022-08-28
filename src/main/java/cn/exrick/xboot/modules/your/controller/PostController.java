@@ -47,13 +47,13 @@ public class PostController {
     //主界面获取的全部数据
     @RequestMapping(value = "/getPostInfo", method = RequestMethod.POST)
     @ApiImplicitParams({
-            @ApiImplicitParam(dataType = "int",name="page",value="页数",required = true),
-            @ApiImplicitParam(dataType = "int",name="part",value="分区",required = true),
+            @ApiImplicitParam(dataType = "String",name="page",value="页数",required = true),
+            @ApiImplicitParam(dataType = "String",name="part",value="分区",required = true),
     })
     @ApiOperation(value = "分页按分区获取帖子数据")
-    public Result<List<PostVO>> selectPostInnerId(@RequestParam("page") int page,@RequestParam("part" ) int part) {
-        int num = 10*page;
-        List<PostVO> postVOS = iPostService.selectPostInnerId(num,part);
+    public Result<List<PostVO>> selectPostInnerId(@RequestParam("page") String page,@RequestParam("part" ) String part) {
+        int num = 10*Integer.parseInt(page);
+        List<PostVO> postVOS = iPostService.selectPostInnerId(num,Integer.parseInt(part));
 
         return new ResultUtil<List<PostVO>>().setData(postVOS);
     }
