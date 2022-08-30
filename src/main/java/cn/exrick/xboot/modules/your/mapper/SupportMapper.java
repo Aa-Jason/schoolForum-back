@@ -13,7 +13,7 @@ import java.util.List;
 @Repository
 public interface SupportMapper extends BaseMapper<Support> {
 
-    List<Support> getInfo(long id);
+    List<Support> getInfo(long id,int a);
 
     List<Support> getPost(String postId);
 

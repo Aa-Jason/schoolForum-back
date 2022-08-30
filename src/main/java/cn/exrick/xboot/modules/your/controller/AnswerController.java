@@ -29,6 +29,7 @@ import java.util.List;
 @RestController
 @Api(tags = "评论回复信息管理接口")
 @RequestMapping("/xboot/answer")
+@CrossOrigin
 @Transactional
 public class AnswerController {
 
@@ -36,9 +37,9 @@ public class AnswerController {
     private IAnswerService iAnswerService;
 
 
-    //根据userid查询answer表
-    public Result<List<Answer>> Post(@PathVariable long id){
-        List<Answer> info = iAnswerService.getInfo(id);
+    //根据userid查询answer表,a用于区分回复回复和回复评论,1为回复，2为评论
+    public Result<List<Answer>> Post(@PathVariable long id,@PathVariable int a){
+        List<Answer> info = iAnswerService.getInfo(id,a);
         return new ResultUtil<List<Answer>>().setData(info);
     }
 
@@ -74,10 +75,12 @@ public class AnswerController {
     })
     @RequestMapping(value = "/getAnswerToComment", method = RequestMethod.POST)
     public Result<List> getAnswerToComment(@RequestParam("userid") long userid) {
-        List<Answer> answer = iAnswerService.getInfo(userid);
+        List<Answer> answer = iAnswerService.getInfo(userid,2);
         List result = new ArrayList();
 
         for(int i = 0;i<answer.size();i++){
+            String time = String.valueOf(answer.get(i).getCreateTime());
+            result.add(0,time);
             result.add(answer.get(i));
             String postId = answer.get(i).getTargetPostId();
             result.add(iAnswerService.getPost(postId).get(i));
@@ -99,10 +102,12 @@ public class AnswerController {
     })
     @RequestMapping(value = "/getAnswerToAnswer", method = RequestMethod.POST)
     public Result<List> getAnswerToAnswer(@RequestParam("userid") long userid) {
-        List<Answer> answer = iAnswerService.getInfo(userid);
+        List<Answer> answer = iAnswerService.getInfo(userid,1);
         List result = new ArrayList();
 
         for(int i = 0;i<answer.size();i++){
+            String time = String.valueOf(answer.get(i).getCreateTime());
+            result.add(0,time);
             result.add(answer.get(i));
             String postId = answer.get(i).getTargetPostId();
             result.add(iAnswerService.getPost(postId).get(i));

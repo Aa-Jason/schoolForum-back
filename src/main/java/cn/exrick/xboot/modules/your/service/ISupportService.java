@@ -11,7 +11,7 @@ import java.util.List;
  */
 public interface ISupportService extends IService<Support> {
 
-    List<Support> getInfo(long id);
+    List<Support> getInfo(long id,int a);
 
     List<Support> getPost(String postId);
 

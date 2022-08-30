@@ -20,6 +20,7 @@ import org.springframework.web.bind.annotation.*;
 import org.springframework.transaction.annotation.Transactional;
 
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.List;
 
 /**
@@ -29,15 +30,17 @@ import java.util.List;
 @RestController
 @Api(tags = "点赞信息管理接口")
 @RequestMapping("/xboot/support")
+@CrossOrigin
 @Transactional
 public class SupportController {
+    private SimpleDate simpleDate;
 
     @Autowired
     private ISupportService iSupportService;
 
-    //根据userid查询support表
-    public Result<List<Support>> Post(@PathVariable long id){
-        List<Support> info = iSupportService.getInfo(id);
+    //根据userid查询support表,a用于区分帖子和评论,1为帖子，2为评论
+    public Result<List<Support>> Post(@PathVariable long id,@PathVariable int a){
+        List<Support> info = iSupportService.getInfo(id,a);
         return new ResultUtil<List<Support>>().setData(info);
     }
 
@@ -68,13 +71,14 @@ public class SupportController {
     })
     @RequestMapping(value = "/getPostSupport", method = RequestMethod.POST)
     public Result<List> getPostSupport(@RequestParam("userid") long userid) {
-        List<Support> support = iSupportService.getInfo(userid);
+        List<Support> support = iSupportService.getInfo(userid,1);
         List result = new ArrayList();
         for(int i = 0;i<support.size();i++){
             String supportUserId = support.get(i).getSupportUserId();
             String postId = support.get(i).getTargetPostId();
+            String time = String.valueOf(support.get(i).getCreateTime());
             result = iSupportService.getPost(postId);
-            System.out.println(iSupportService.getUserInfo(supportUserId).get(i));
+            result.add(0,time);
             List userInfo = iSupportService.getUserInfo(supportUserId);
             result.add(userInfo.get(i));
         }
@@ -91,12 +95,14 @@ public class SupportController {
     })
     @RequestMapping(value = "/getCommentSupport", method = RequestMethod.POST)
     public Result<List> getCommentSupport(@RequestParam("userid") long userid) {
-        List<Support> sup = iSupportService.getInfo(userid);
+        List<Support> sup = iSupportService.getInfo(userid,2);
         List result = new ArrayList();
         for(int i = 0;i<sup.size();i++){
+            String time = String.valueOf(sup.get(i).getCreateTime());
             String supportUserId = sup.get(i).getSupportUserId();
             String postId = sup.get(i).getTargetPostId();
             result = iSupportService.getPost(postId);
+            result.add(0,time);
             System.out.println(iSupportService.getUserInfo(supportUserId).get(i));
             List userInfo = iSupportService.getUserInfo(supportUserId);
             result.add(userInfo.get(i));
@@ -107,7 +113,6 @@ public class SupportController {
 
         return new ResultUtil<List>().setData(result);
     }
-
 
     @RequestMapping(value = "/get/{id}", method = RequestMethod.GET)
     @ApiOperation(value = "通过id获取")

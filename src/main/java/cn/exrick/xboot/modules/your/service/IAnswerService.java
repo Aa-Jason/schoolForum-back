@@ -17,7 +17,7 @@ import java.util.List;
 
 public interface IAnswerService extends IService<Answer> {
 
-    List<Answer> getInfo(long id);
+    List<Answer> getInfo(long id,int a);
 
     List<Post> getPost(String postId);
 

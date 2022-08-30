@@ -70,24 +70,24 @@
     </resultMap>
     <select id="getInfo" resultMap="BaseResultMap">
         select * from s_support
-        where (target_post_user_id=#{id}
-        or target_comment_user_id=#{id})
+        where del_flag=0 and ((#{a}=1 and target_post_user_id=#{id} and target_comment_id is null)
+        or(#{a}=2 and target_comment_user_id=#{id}))
         order by create_time desc
     </select>
 
     <select id="getPost" resultMap="PostVOMap">
-        select post_title,nick_name,id
+        select post_title,nick_name,id,create_time
         from s_post
-        where id=#{postId}
+        where id=#{postId} and del_flag=0
 
     </select>
     <select id="getUserInfo" resultMap="UserInfoVOMap">
         select nick_name,id,avatar from s_user_info
-        where id=#{userId}
+        where id=#{userId} and del_flag=0
     </select>
     <select id="getCommentInfo" resultMap="CommentInfoMap">
         select nick_name,comment_content,id
         from s_comment
-        where id=#{commentId}
+        where id=#{commentId} and del_flag=0
     </select>
 </mapper>

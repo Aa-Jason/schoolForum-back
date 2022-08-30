@@ -26,8 +26,8 @@ public class IAnswerServiceImpl extends ServiceImpl<AnswerMapper, Answer> implem
     private AnswerMapper answerMapper;
 
     @Override
-    public List<Answer> getInfo(long id) {
-        List<Answer> info = answerMapper.getInfo(id);
+    public List<Answer> getInfo(long id,int a) {
+        List<Answer> info = answerMapper.getInfo(id,a);
         return info;
     }
 

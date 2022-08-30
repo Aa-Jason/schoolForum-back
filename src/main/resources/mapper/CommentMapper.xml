@@ -16,17 +16,17 @@
     </resultMap>
     <select id="getInfo" resultType="cn.exrick.xboot.modules.your.entity.Comment">
         select * from s_comment
-        where post_user_id=#{id}
+        where post_user_id=#{id} and del_flag=0
         order by create_time desc
     </select>
     <select id="getPost" resultType="cn.exrick.xboot.modules.your.entity.Post">
         select post_title,nick_name,id
         from s_post
-        where id=#{postId}
+        where id=#{postId} and del_flag=0
     </select>
     <select id="getUserInfo" resultType="cn.exrick.xboot.modules.your.entity.UserInfo">
         select nick_name,id,avatar from s_user_info
-        where id=#{userId}
+        where id=#{userId} and del_flag=0
     </select>
 
 </mapper>

@@ -15,7 +15,7 @@ import java.util.List;
  */
 @Repository
 public interface AnswerMapper extends BaseMapper<Answer> {
-        List<Answer> getInfo(long id);
+        List<Answer> getInfo(long id,int a);
 
     List<Post> getPost(String postId);
 

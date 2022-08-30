@@ -28,6 +28,7 @@ import java.util.List;
 @RestController
 @Api(tags = "帖子评论信息管理接口")
 @RequestMapping("/xboot/comment")
+@CrossOrigin
 @Transactional
 public class CommentController {
 
@@ -59,14 +60,14 @@ public class CommentController {
     @RequestMapping(value = "/getPostComment", method = RequestMethod.POST)
     public Result<List> getPostComment(@RequestParam("userid") long userid) {
         List<Comment> comment = iCommentService.getInfo(userid);
-        int a = comment.size();
         List result = new ArrayList();
-
         for(int i = 0;i<comment.size();i++){
+            String time = String.valueOf(comment.get(i).getCreateTime());
+            result.add(0,time);
             result.add(comment.get(i));
             String postId = comment.get(i).getPostId();
             result.add(iCommentService.getPost(postId).get(i));
-            String targetUserid=comment.get(i).getPostUserId();
+            String targetUserid=comment.get(i).getCommentUserId();
             result.add(iCommentService.getUserInfo(targetUserid).get(i));
         }
         return new ResultUtil<List>().setData(result);

@@ -26,9 +26,9 @@ public class ISupportServiceImpl extends ServiceImpl<SupportMapper, Support> imp
     private SupportMapper supportMapper;
 
     @Override
-    public List<Support> getInfo(long id) {
+    public List<Support> getInfo(long id,int a) {
 
-        List<Support> info = supportMapper.getInfo(id);
+        List<Support> info = supportMapper.getInfo(id,a);
         return info;
     }
 
