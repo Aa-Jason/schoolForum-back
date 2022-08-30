@@ -15,7 +15,7 @@ import java.util.List;
 public interface PostMapper extends BaseMapper<Post> {
     public List<Post> selectAllPost();
 
-    public List<Post> selectAllPostById(String id);
+    public List<Post> selectAllPostById(long id,int dif);
 
 
     List<PostVO> selectPostInnerId(int num, int part);

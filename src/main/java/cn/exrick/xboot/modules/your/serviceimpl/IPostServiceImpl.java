@@ -33,8 +33,8 @@ public class IPostServiceImpl extends ServiceImpl<PostMapper, Post> implements I
     }
 
     @Override
-    public List<Post> selectAllPostById(String id) {
-        List<Post> posts = postMapper.selectAllPostById(id);
+    public List<Post> selectAllPostById(int id,int dif) {
+        List<Post> posts = postMapper.selectAllPostById(id,dif);
         return posts;
     }
 

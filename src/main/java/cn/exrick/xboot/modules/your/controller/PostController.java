@@ -35,11 +35,16 @@ public class PostController {
     @Autowired
     private IPostService iPostService;
 
-    @RequestMapping(value = "/get/{id}", method = RequestMethod.GET)
-    @ApiOperation(value = "通过id获取")
-    public Result<List<Post>> get(@PathVariable String id) {
 
-        List<Post> posts = iPostService.selectAllPostById(id);
+    @ApiImplicitParams({
+            @ApiImplicitParam(dataType = "int",name="id",value="id",required = true),
+            @ApiImplicitParam(dataType = "int",name="dif",value="区分",required = true),
+    })
+    @RequestMapping(value = "/getPostById", method = RequestMethod.POST)
+    @ApiOperation(value = "通过用户id或者帖子id获取帖子")
+    public Result<List<Post>> getPostById(@RequestParam("id") int id,@RequestParam("dif") int dif) {//用dif区分用户和帖子，1代表用户，2代表帖子
+
+        List<Post> posts = iPostService.selectAllPostById(id,dif);
         return new ResultUtil<List<Post>>().setData(posts);
     }
 

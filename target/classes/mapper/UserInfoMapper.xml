@@ -20,16 +20,17 @@
 
     <select id="loginAuth" resultMap="BaseResultMap">
         SELECT username,password FROM s_user_info
-        WHERE username=#{name} AND password=#{pwd}
+        WHERE username=#{name} AND password=#{pwd} and del_flag=0
     </select>
 
     <select id="getUserIdByUsername" resultMap="BaseResultMap">
         SELECT id FROM s_user_info
-        WHERE username=#{name}
+        WHERE username=#{name} and del_flag=0
     </select>
 
     <select id="getAll" resultMap="BaseResultMap">
         SELECT * FROM s_user_info
+        where del_flag=0
         ORDER BY create _time DESC
     </select>
 

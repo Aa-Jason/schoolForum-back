@@ -15,7 +15,7 @@ import java.util.List;
 public interface IPostService extends IService<Post> {
     public List<Post> selectAllPost();
 
-    public List<Post> selectAllPostById(String id);
+    public List<Post> selectAllPostById(int id,int dif);
 
     public List<PostVO> selectPostInnerId(int num,int part);
 }

@@ -43,7 +43,6 @@
                p.id,
                p.create_by,
                p.create_time,
-               p.del_flag,
                p.update_by,
                p.update_time,
                p.comment_count,
@@ -69,7 +68,7 @@
                                     or if(#{part} = 9, p.post_part = '生活用品', p.post_part = '无')
                                     or if(#{part} = 10, p.post_part = '文具书籍', p.post_part = '无'))
 
-        order by create_time desc
+        order by p.create_time desc
             limit #{num}
     </select>
     <!--查询所有信息-->
@@ -88,24 +87,31 @@
                support_count,
                user_id
         from s_post
+        where del_flag=0
         order by create_time desc
     </select>
     <!--通过id进行查询-->
-    <select id="selectAllPostById" resultMap="BaseResultMap">
-        select create_by,
-               create_time,
-               del_flag,
-               update_by,
-               update_time,
-               comment_count,
-               post_content,
-               post_part,
-               post_picture,
-               post_title,
-               support_count,
-               user_id
-        from s_post
-        where id = #{id}
+    <select id="selectAllPostById" resultMap="PostVOMap">
+        select u.nick_name,
+               u.avatar,
+               p.id,
+               p.create_by,
+               p.create_time,
+               p.update_by,
+               p.update_time,
+               p.comment_count,
+               p.post_content,
+               p.post_part,
+               p.post_picture,
+               p.post_title,
+               p.support_count,
+               p.user_id
+        from s_post p
+                 INNER JOIN s_user_info u
+                            ON u.id = p.user_id
+        where p.del_flag = 0
+          and u.del_flag = 0 and (if(#{dif}=2,p.id = #{id},p.post_part='444') or if(#{dif}=1,p.user_id=#{id},p.post_part="sfdsf"))
+        order by p.create_time desc
     </select>
 
 </mapper>
