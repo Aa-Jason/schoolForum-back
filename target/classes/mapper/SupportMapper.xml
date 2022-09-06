@@ -2,92 +2,110 @@
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="cn.exrick.xboot.modules.your.mapper.SupportMapper">
     <resultMap id="BaseResultMap" type="cn.exrick.xboot.modules.your.entity.Support">
-        <id column="id" jdbcType="VARCHAR" property="id" />
-        <result column="create_by" jdbcType="VARCHAR" property="createBy" />
-        <result column="create_time" jdbcType="INTEGER" property="createTime" />
-        <result column="del_flag" jdbcType="INTEGER" property="delFlag" />
-        <result column="update_by" jdbcType="VARCHAR" property="updateBy" />
-        <result column="update_time" jdbcType="VARCHAR" property="updateTime" />
-        <result column="support_nick_name" jdbcType="VARCHAR" property="supportNickName" />
-        <result column="support_user_id" jdbcType="VARCHAR" property="supportUserId" />
-        <result column="target_comment_id" jdbcType="VARCHAR" property="targetCommentId" />
-        <result column="target_comment_user_id" jdbcType="VARCHAR" property="targetCommentUserId" />
-        <result column="target_post_user_id" jdbcType="VARCHAR" property="targetPostUserId" />
-        <result column="target_post_id" jdbcType="VARCHAR" property="targetPostId" />
+        <id column="id" jdbcType="VARCHAR" property="id"/>
+        <result column="create_by" jdbcType="VARCHAR" property="createBy"/>
+        <result column="create_time" jdbcType="INTEGER" property="createTime"/>
+        <result column="del_flag" jdbcType="INTEGER" property="delFlag"/>
+        <result column="update_by" jdbcType="VARCHAR" property="updateBy"/>
+        <result column="update_time" jdbcType="VARCHAR" property="updateTime"/>
+        <result column="support_nick_name" jdbcType="VARCHAR" property="supportNickName"/>
+        <result column="support_user_id" jdbcType="VARCHAR" property="supportUserId"/>
+        <result column="target_comment_id" jdbcType="VARCHAR" property="targetCommentId"/>
+        <result column="target_comment_user_id" jdbcType="VARCHAR" property="targetCommentUserId"/>
+        <result column="target_post_user_id" jdbcType="VARCHAR" property="targetPostUserId"/>
+        <result column="target_post_id" jdbcType="VARCHAR" property="targetPostId"/>
     </resultMap>
 
     <resultMap id="PostVOMap" type="cn.exrick.xboot.modules.your.vo.PostVO">
-        <id column="id" jdbcType="INTEGER" property="id" />
-        <result column="create_by" jdbcType="VARCHAR" property="createBy" />
-        <result column="create_time" jdbcType="INTEGER" property="createTime" />
-        <result column="del_flag" jdbcType="INTEGER" property="delFlag" />
-        <result column="update_by" jdbcType="VARCHAR" property="updateBy" />
-        <result column="update_time" jdbcType="VARCHAR" property="updateTime" />
-        <result column="comment_count" jdbcType="VARCHAR" property="commentCount" />
-        <result column="post_content" jdbcType="VARCHAR" property="postContent" />
-        <result column="post_part" jdbcType="VARCHAR" property="postPart" />
-        <result column="post_picture" jdbcType="VARCHAR" property="postPicture" />
-        <result column="post_title" jdbcType="VARCHAR" property="postTitle" />
-        <result column="support_count" jdbcType="VARCHAR" property="supportCount" />
-        <result column="user_id" jdbcType="VARCHAR" property="userId" />
+        <id column="id" jdbcType="INTEGER" property="id"/>
+        <result column="create_by" jdbcType="VARCHAR" property="createBy"/>
+        <result column="create_time" jdbcType="INTEGER" property="createTime"/>
+        <result column="del_flag" jdbcType="INTEGER" property="delFlag"/>
+        <result column="update_by" jdbcType="VARCHAR" property="updateBy"/>
+        <result column="update_time" jdbcType="VARCHAR" property="updateTime"/>
+        <result column="comment_count" jdbcType="VARCHAR" property="commentCount"/>
+        <result column="post_content" jdbcType="VARCHAR" property="postContent"/>
+        <result column="post_part" jdbcType="VARCHAR" property="postPart"/>
+        <result column="post_picture" jdbcType="VARCHAR" property="postPicture"/>
+        <result column="post_title" jdbcType="VARCHAR" property="postTitle"/>
+        <result column="support_count" jdbcType="VARCHAR" property="supportCount"/>
+        <result column="user_id" jdbcType="VARCHAR" property="userId"/>
 
-        <result column="nick_name" jdbcType="VARCHAR" property="nickName" />
-        <result column="avatar" jdbcType="VARCHAR" property="avatar" />
-        <result column="id" jdbcType="VARCHAR" property="id" />
+        <result column="nick_name" jdbcType="VARCHAR" property="nickName"/>
+        <result column="avatar" jdbcType="VARCHAR" property="avatar"/>
+        <result column="id" jdbcType="VARCHAR" property="id"/>
     </resultMap>
 
     <resultMap id="UserInfoVOMap" type="cn.exrick.xboot.modules.your.entity.UserInfo">
-        <id column="id" jdbcType="VARCHAR" property="id" />
-        <result column="create_by" jdbcType="VARCHAR" property="createBy" />
-        <result column="create_time" jdbcType="INTEGER" property="createTime" />
-        <result column="del_flag" jdbcType="INTEGER" property="delFlag" />
-        <result column="update_by" jdbcType="VARCHAR" property="updateBy" />
-        <result column="update_time" jdbcType="VARCHAR" property="updateTime" />
-        <result column="avatar" jdbcType="VARCHAR" property="avatar" />
-        <result column="contact_detail" jdbcType="VARCHAR" property="contactDetail" />
-        <result column="nick_name" jdbcType="VARCHAR" property="nickName" />
-        <result column="password" jdbcType="VARCHAR" property="password" />
-        <result column="school" jdbcType="VARCHAR" property="school" />
-        <result column="student_id" jdbcType="VARCHAR" property="studentId" />
-        <result column="user_type" jdbcType="VARCHAR" property="userType" />
-        <result column="username" jdbcType="VARCHAR" property="username" />
-        <result column="id" jdbcType="VARCHAR" property="id" />
+        <id column="id" jdbcType="VARCHAR" property="id"/>
+        <result column="create_by" jdbcType="VARCHAR" property="createBy"/>
+        <result column="create_time" jdbcType="INTEGER" property="createTime"/>
+        <result column="del_flag" jdbcType="INTEGER" property="delFlag"/>
+        <result column="update_by" jdbcType="VARCHAR" property="updateBy"/>
+        <result column="update_time" jdbcType="VARCHAR" property="updateTime"/>
+        <result column="avatar" jdbcType="VARCHAR" property="avatar"/>
+        <result column="contact_detail" jdbcType="VARCHAR" property="contactDetail"/>
+        <result column="nick_name" jdbcType="VARCHAR" property="nickName"/>
+        <result column="password" jdbcType="VARCHAR" property="password"/>
+        <result column="school" jdbcType="VARCHAR" property="school"/>
+        <result column="student_id" jdbcType="VARCHAR" property="studentId"/>
+        <result column="user_type" jdbcType="VARCHAR" property="userType"/>
+        <result column="username" jdbcType="VARCHAR" property="username"/>
+        <result column="id" jdbcType="VARCHAR" property="id"/>
     </resultMap>
 
     <resultMap id="CommentInfoMap" type="cn.exrick.xboot.modules.your.entity.Comment">
-        <id column="id" jdbcType="INTEGER" property="id" />
-        <result column="create_by" jdbcType="VARCHAR" property="createBy" />
-        <result column="create_time" jdbcType="INTEGER" property="createTime" />
-        <result column="del_flag" jdbcType="INTEGER" property="delFlag" />
-        <result column="update_by" jdbcType="VARCHAR" property="updateBy" />
-        <result column="update_time" jdbcType="VARCHAR" property="updateTime" />
-        <result column="comment_answer_count" jdbcType="VARCHAR" property="commentAnswerCount" />
-        <result column="comment_content" jdbcType="VARCHAR" property="commentContent" />
-        <result column="comment_support_count" jdbcType="VARCHAR" property="commentSupportCount" />
-        <result column="comment_user_id" jdbcType="VARCHAR" property="commentUserId" />
-        <result column="nick_name" jdbcType="VARCHAR" property="nickName" />
-        <result column="post_id" jdbcType="VARCHAR" property="postId" />
+        <id column="id" jdbcType="INTEGER" property="id"/>
+        <result column="create_by" jdbcType="VARCHAR" property="createBy"/>
+        <result column="create_time" jdbcType="INTEGER" property="createTime"/>
+        <result column="del_flag" jdbcType="INTEGER" property="delFlag"/>
+        <result column="update_by" jdbcType="VARCHAR" property="updateBy"/>
+        <result column="update_time" jdbcType="VARCHAR" property="updateTime"/>
+        <result column="comment_answer_count" jdbcType="VARCHAR" property="commentAnswerCount"/>
+        <result column="comment_content" jdbcType="VARCHAR" property="commentContent"/>
+        <result column="comment_support_count" jdbcType="VARCHAR" property="commentSupportCount"/>
+        <result column="comment_user_id" jdbcType="VARCHAR" property="commentUserId"/>
+        <result column="nick_name" jdbcType="VARCHAR" property="nickName"/>
+        <result column="post_id" jdbcType="VARCHAR" property="postId"/>
     </resultMap>
+    <insert id="Support">
+        insert into s_support(support_nick_name, support_user_id, target_comment_id, target_comment_user_id,
+                              target_post_id, target_post_user_id, create_time)
+        VALUES (#{nickName}, #{supportUserId},#{commentId}, #{commentUserId}, #{postId},#{postUserId},#{time})
+    </insert>
+
+    <update id="postUpdate">
+        update s_post set support_count=support_count+1 where id=#{postId}
+    </update>
+    <update id="commentUpdate">
+        update s_comment set comment_support_count=comment_support_count+1 where id=#{commentId}
+    </update>
     <select id="getInfo" resultMap="BaseResultMap">
-        select * from s_support
-        where del_flag=0 and ((#{a}=1 and target_post_user_id=#{id} and target_comment_id is null)
-        or(#{a}=2 and target_comment_user_id=#{id}))
+        select *
+        from s_support
+        where del_flag = 0
+          and ((#{a} = 1 and target_post_user_id = #{id} and (target_comment_id is null or target_comment_id = 0))
+            or (#{a} = 2 and target_comment_user_id = #{id}))
         order by create_time desc
     </select>
 
     <select id="getPost" resultMap="PostVOMap">
-        select post_title,nick_name,id,create_time
+        select post_title, nick_name, id, create_time
         from s_post
-        where id=#{postId} and del_flag=0
+        where id = #{postId}
+          and del_flag = 0
 
     </select>
     <select id="getUserInfo" resultMap="UserInfoVOMap">
-        select nick_name,id,avatar from s_user_info
-        where id=#{userId} and del_flag=0
+        select nick_name, id, avatar
+        from s_user_info
+        where id = #{userId}
+          and del_flag = 0
     </select>
     <select id="getCommentInfo" resultMap="CommentInfoMap">
-        select nick_name,comment_content,id
+        select nick_name, comment_content, id
         from s_comment
-        where id=#{commentId} and del_flag=0
+        where id = #{commentId}
+          and del_flag = 0
     </select>
 </mapper>

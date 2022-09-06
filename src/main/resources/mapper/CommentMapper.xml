@@ -14,6 +14,10 @@
         <result column="comment_user_id" jdbcType="VARCHAR" property="commentUserId" />
         <result column="post_id" jdbcType="VARCHAR" property="postId" />
     </resultMap>
+    <insert id="newComment">
+        insert into s_comment (create_time,comment_content,comment_user_id,post_id,nick_name,post_user_id)
+        values (#{time},#{commentContent},#{commentUserId},#{postId},#{nickName},#{postUserId})
+    </insert>
     <select id="getInfo" resultType="cn.exrick.xboot.modules.your.entity.Comment">
         select * from s_comment
         where post_user_id=#{id} and del_flag=0
@@ -27,6 +31,14 @@
     <select id="getUserInfo" resultType="cn.exrick.xboot.modules.your.entity.UserInfo">
         select nick_name,id,avatar from s_user_info
         where id=#{userId} and del_flag=0
+    </select>
+    <select id="getCommentByPostId" resultType="cn.exrick.xboot.modules.your.entity.Comment">
+        select * from s_comment where post_id=#{postId} and del_flag=0
+        order by create_time desc
+    </select>
+    <select id="getAnswerByCommentId" resultType="cn.exrick.xboot.modules.your.entity.Answer">
+        select * from s_answer where comment_id=#{commentId} and del_flag=0
+        order by create_time desc
     </select>
 
 </mapper>

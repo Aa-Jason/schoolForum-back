@@ -29,7 +29,7 @@ public class TabelTest extends XbootBaseEntity {
     // 发帖人id 昵称 头像从用户登录表取
     @ApiModelProperty(value = "帖子id")
     @TableField("postId")
-    private Integer postId;
+    private int postId;
 
     @ApiModelProperty(value = "帖子标题")
     @TableField("postTitl")

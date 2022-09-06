@@ -20,6 +20,7 @@ import org.springframework.web.bind.annotation.*;
 import org.springframework.transaction.annotation.Transactional;
 
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.List;
 
 /**
@@ -67,6 +68,27 @@ public class AnswerController {
         return new ResultUtil<List<Answer>>().setData(info);
     }
 
+    @ApiOperation(value="回复评论")
+    @ApiImplicitParams({
+            @ApiImplicitParam(dataType = "int",name="postId",value="帖子Id",required = true),
+            @ApiImplicitParam(dataType = "String",name="answerContent",value="回复内容",required = true),
+            @ApiImplicitParam(dataType = "String",name="nickName",value="回复人昵称",required = true),
+            @ApiImplicitParam(dataType = "int",name="answerUserId",value="回复人id",required = true),
+            @ApiImplicitParam(dataType = "int",name="targetAnswerId",value="目标回复id",required = false),
+            @ApiImplicitParam(dataType = "int",name="targetUserId",value="回复对象id",required = true),
+            @ApiImplicitParam(dataType = "int",name="commentId",value="评论id",required = true),
+            @ApiImplicitParam(dataType = "String",name="targetNickName",value="回复对象昵称",required = true),
+    })
+    @RequestMapping(value = "/sendAnswer", method = RequestMethod.POST)
+    public Result<String> Answer(@RequestParam("postId") int postId,@RequestParam("answerContent") String answerContent,@RequestParam("nickName") String nickName,
+                                  @RequestParam("answerUserId") int answerUserId,@RequestParam("targetAnswerId") int targetAnswerId,
+                                 @RequestParam("targetUserId") int targetUserId,@RequestParam("commentId") int commentId,@RequestParam("targetNickName") String targetNickName){
+        Answer answer = new Answer();
+        answer.setCreateTime(new Date());
+        iAnswerService.newAnswer(postId,answerContent,nickName,answerUserId,targetAnswerId,targetUserId,commentId,answer.getCreateTime(),targetNickName);
+        String result="回复回执";
+        return new ResultUtil<String>().setData(result);
+    }
 
 
     @ApiOperation(value="回复评论信息")

@@ -3,6 +3,7 @@ package cn.exrick.xboot.modules.your.service;
 import com.baomidou.mybatisplus.extension.service.IService;
 import cn.exrick.xboot.modules.your.entity.Support;
 
+import java.util.Date;
 import java.util.List;
 
 /**
@@ -18,4 +19,11 @@ public interface ISupportService extends IService<Support> {
     List<Support> getUserInfo(String userId);
 
     List<Support> getCommentInfo(String commentId);
+    
+
+    List Support(int postId, int postUserId, int dif, String nickName, int supportUserId, int commentId, int commentUserId, Date time);
+
+    void postUpdate(int postId);
+
+    void commentUpdate(int commentId);
 }

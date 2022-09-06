@@ -1,13 +1,12 @@
 package cn.exrick.xboot.modules.your.service;
 
-import cn.exrick.xboot.modules.your.controller.AnswerController;
 import cn.exrick.xboot.modules.your.entity.Comment;
 import cn.exrick.xboot.modules.your.entity.Post;
 import cn.exrick.xboot.modules.your.entity.UserInfo;
 import com.baomidou.mybatisplus.extension.service.IService;
 import cn.exrick.xboot.modules.your.entity.Answer;
-import org.springframework.stereotype.Repository;
 
+import java.util.Date;
 import java.util.List;
 
 /**
@@ -26,4 +25,6 @@ public interface IAnswerService extends IService<Answer> {
     List<Comment> getCommentInfo(String commentId);
 
     List<Answer> getAnswerInfo(String answerId);
+
+    void newAnswer(int postId, String answerContent, String nickName, int answerUserId, int targetAnswerId, int targetUserId, int commentId, Date time, String targetNickName);
 }

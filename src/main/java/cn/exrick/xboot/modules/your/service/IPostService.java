@@ -18,4 +18,11 @@ public interface IPostService extends IService<Post> {
     public List<Post> selectAllPostById(int id,int dif);
 
     public List<PostVO> selectPostInnerId(int num,int part);
+
+    public List<PostVO> selectPostByKey(String key);
+
+    //用户发帖String postContent,String postPart,String postPicture,String postTitle
+    public List<Post> posted(String postContent,String postPart,String postPicture,String postTitle,int userId,String nickName);
+
+    void delPostById(int id);
 }

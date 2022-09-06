@@ -29,15 +29,15 @@ public class Comment extends XbootBaseEntity {
 
     @ApiModelProperty(value = "帖子id")
     @TableField("postId")
-    private String postId;
+    private int postId;
 
     @ApiModelProperty(value = "帖子所有者id")
     @TableField("postUserId")
-    private String postUserId;
+    private int postUserId;
 
     @ApiModelProperty(value = "评论人id")
     @TableField("commentUserId")
-    private String commentUserId;
+    private int commentUserId;
 
     @ApiModelProperty(value = "评论人昵称")
     @TableField("nickName")
@@ -49,9 +49,9 @@ public class Comment extends XbootBaseEntity {
 
     @ApiModelProperty(value = "评论点赞数")
     @TableField("commentSupportCount")
-    private String commentSupportCount;
+    private int commentSupportCount;
 
     @ApiModelProperty(value = "评论回复数")
     @TableField("commentAnswerCount")
-    private String commentAnswerCount;
+    private int commentAnswerCount;
 }

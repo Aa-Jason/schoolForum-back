@@ -45,7 +45,7 @@ public class Post extends XbootBaseEntity {
 
     @ApiModelProperty(value = "发帖人ID")
     @TableField("userId")
-    private String userId;
+    private Integer userId;
 
     @ApiModelProperty(value = "发帖人昵称")
     @TableField("nickName")
@@ -53,11 +53,11 @@ public class Post extends XbootBaseEntity {
 
     @ApiModelProperty(value = "帖子点赞数")
     @TableField("supportCount")
-    private String supportCount;
+    private Integer supportCount;
 
     @ApiModelProperty(value = "帖子评论数")
     @TableField("commentCount")
-    private String commentCount;
+    private Integer commentCount;
 
 
 }

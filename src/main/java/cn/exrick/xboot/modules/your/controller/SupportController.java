@@ -20,6 +20,7 @@ import org.springframework.web.bind.annotation.*;
 import org.springframework.transaction.annotation.Transactional;
 
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.Date;
 import java.util.List;
 
@@ -39,47 +40,77 @@ public class SupportController {
     private ISupportService iSupportService;
 
     //根据userid查询support表,a用于区分帖子和评论,1为帖子，2为评论
-    public Result<List<Support>> Post(@PathVariable long id,@PathVariable int a){
-        List<Support> info = iSupportService.getInfo(id,a);
+    public Result<List<Support>> Post(@PathVariable long id, @PathVariable int a) {
+        List<Support> info = iSupportService.getInfo(id, a);
         return new ResultUtil<List<Support>>().setData(info);
     }
 
     //根据postId查询帖子信息
-    public Result<List<Support>> Post(@PathVariable String postId){
+    public Result<List<Support>> Post(@PathVariable String postId) {
         List<Support> info = iSupportService.getPost(postId);
         return new ResultUtil<List<Support>>().setData(info);
     }
+
     //根据userid查询用户信息表
-    public Result<List<Support>> get(@PathVariable String userId){
+    public Result<List<Support>> get(@PathVariable String userId) {
         List<Support> info = iSupportService.getUserInfo(userId);
         return new ResultUtil<List<Support>>().setData(info);
     }
+
     //根据commentId查询评论信息表
-    public Result<List<Support>> getComment(@PathVariable String commentId){
+    public Result<List<Support>> getComment(@PathVariable String commentId) {
         List<Support> info = iSupportService.getCommentInfo(commentId);
         return new ResultUtil<List<Support>>().setData(info);
+    }
+
+    //dif=1为给帖子点赞，2为点赞评论
+    @ApiOperation(value = "点赞")
+    @ApiImplicitParams({
+            @ApiImplicitParam(dataType = "int", name = "postId", value = "帖子id", required = true),
+            @ApiImplicitParam(dataType = "int", name = "postUserId", value = "发帖人id", required = true),
+            @ApiImplicitParam(dataType = "int", name = "dif", value = "区分", required = true),
+            @ApiImplicitParam(dataType = "String", name = "nickName", value = "点赞人昵称", required = true),
+            @ApiImplicitParam(dataType = "int", name = "supportUserId", value = "点赞人id", required = true),
+            @ApiImplicitParam(dataType = "int", name = "commentId", value = "评论id", required = false),
+            @ApiImplicitParam(dataType = "int", name = "commentUserId", value = "评论人id", required = false),
+    })
+    @RequestMapping(value = "/support", method = RequestMethod.GET)
+    public Result<List> Support(@RequestParam("postId") int postId, @RequestParam("postUserId") int postUserId, @RequestParam("dif") int dif, @RequestParam("nickName") String nickName,
+                                @RequestParam("supportUserId") int supportUserId, @RequestParam("commentId") int commentId, @RequestParam("commentUserId") int commentUserId) {
+        List result = new ArrayList();
+        List msg = Collections.singletonList("点赞回执");
+        result.add(0, msg);
+        Date time = new Date();
+        result = iSupportService.Support(postId, postUserId, dif, nickName, supportUserId, commentId, commentUserId, time);
+        if (dif == 1) {
+            iSupportService.postUpdate(postId);
+        } else {
+            iSupportService.commentUpdate(commentId);
+        }
+        return new ResultUtil<List>().setData(result);
     }
 
 
     /**
      * 此接口返回消息页帖子点赞信息
+     *
      * @return
      */
-    @ApiOperation(value="帖子点赞信息接口")
+    @ApiOperation(value = "帖子点赞信息接口")
     @ApiImplicitParams({
-            @ApiImplicitParam(dataType = "long",name="userid",value="用户id",required = true),
+            @ApiImplicitParam(dataType = "long", name = "userid", value = "用户id", required = true),
     })
     @RequestMapping(value = "/getPostSupport", method = RequestMethod.POST)
     public Result<List> getPostSupport(@RequestParam("userid") long userid) {
-        List<Support> support = iSupportService.getInfo(userid,1);
+        List<Support> support = iSupportService.getInfo(userid, 1);
         List result = new ArrayList();
-        for(int i = 0;i<support.size();i++){
-            String supportUserId = support.get(i).getSupportUserId();
-            String postId = support.get(i).getTargetPostId();
+        for (int i = 0; i < support.size(); i++) {
+            int supportUserId = support.get(i).getSupportUserId();
+            String postId = String.valueOf(support.get(i).getTargetPostId());
             String time = String.valueOf(support.get(i).getCreateTime());
             result = iSupportService.getPost(postId);
-            result.add(0,time);
-            List userInfo = iSupportService.getUserInfo(supportUserId);
+            result.add(0, time);
+            List userInfo = iSupportService.getUserInfo(String.valueOf(supportUserId));
             result.add(userInfo.get(i));
         }
         return new ResultUtil<List>().setData(result);
@@ -87,26 +118,27 @@ public class SupportController {
 
     /**
      * 此接口返回消息页评论点赞信息
+     *
      * @return
      */
-    @ApiOperation(value="评论点赞信息接口")
+    @ApiOperation(value = "评论点赞信息接口")
     @ApiImplicitParams({
-            @ApiImplicitParam(dataType = "long",name="userid",value="用户id",required = true),
+            @ApiImplicitParam(dataType = "long", name = "userid", value = "用户id", required = true),
     })
     @RequestMapping(value = "/getCommentSupport", method = RequestMethod.POST)
     public Result<List> getCommentSupport(@RequestParam("userid") long userid) {
-        List<Support> sup = iSupportService.getInfo(userid,2);
+        List<Support> sup = iSupportService.getInfo(userid, 2);
         List result = new ArrayList();
-        for(int i = 0;i<sup.size();i++){
+        for (int i = 0; i < sup.size(); i++) {
             String time = String.valueOf(sup.get(i).getCreateTime());
-            String supportUserId = sup.get(i).getSupportUserId();
-            String postId = sup.get(i).getTargetPostId();
+            String supportUserId = String.valueOf(sup.get(i).getSupportUserId());
+            String postId = String.valueOf(sup.get(i).getTargetPostId());
             result = iSupportService.getPost(postId);
-            result.add(0,time);
+            result.add(0, time);
             System.out.println(iSupportService.getUserInfo(supportUserId).get(i));
             List userInfo = iSupportService.getUserInfo(supportUserId);
             result.add(userInfo.get(i));
-            String commentId = sup.get(i).getTargetCommentId();
+            String commentId = String.valueOf(sup.get(i).getTargetCommentId());
             List commentInfo = iSupportService.getCommentInfo(commentId);
             result.add(commentInfo.get(i));
         }

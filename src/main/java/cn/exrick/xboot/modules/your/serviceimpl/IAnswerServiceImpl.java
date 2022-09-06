@@ -1,6 +1,5 @@
 package cn.exrick.xboot.modules.your.serviceimpl;
 
-import cn.exrick.xboot.modules.your.controller.AnswerController;
 import cn.exrick.xboot.modules.your.entity.*;
 import cn.exrick.xboot.modules.your.mapper.AnswerMapper;
 import cn.exrick.xboot.modules.your.service.IAnswerService;
@@ -10,7 +9,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
-import java.util.ArrayList;
+import java.util.Date;
 import java.util.List;
 
 /**
@@ -55,4 +54,6 @@ public class IAnswerServiceImpl extends ServiceImpl<AnswerMapper, Answer> implem
         return info;
     }
 
+    @Override
+    public void newAnswer(int postId, String answerContent, String nickName, int answerUserId, int targetAnswerId, int targetUserId, int commentId, Date time, String targetNickName){}
 }

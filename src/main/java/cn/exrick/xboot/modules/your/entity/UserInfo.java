@@ -49,7 +49,7 @@ public class UserInfo extends XbootBaseEntity {
 
     @ApiModelProperty(value = "学号")
     @TableField("studentId")
-    private String studentId;
+    private Integer studentId;
 
     @ApiModelProperty(value = "学校")
     @TableField("school")

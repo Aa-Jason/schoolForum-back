@@ -1,6 +1,5 @@
 package cn.exrick.xboot.modules.your.serviceimpl;
 
-import cn.exrick.xboot.modules.your.entity.UserInfo;
 import cn.exrick.xboot.modules.your.mapper.SupportMapper;
 import cn.exrick.xboot.modules.your.entity.Support;
 import cn.exrick.xboot.modules.your.service.ISupportService;
@@ -10,11 +9,12 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
-import java.util.ArrayList;
+import java.util.Date;
 import java.util.List;
 
 /**
  * 点赞信息接口实现
+ *
  * @author xqp
  */
 @Slf4j
@@ -26,9 +26,9 @@ public class ISupportServiceImpl extends ServiceImpl<SupportMapper, Support> imp
     private SupportMapper supportMapper;
 
     @Override
-    public List<Support> getInfo(long id,int a) {
+    public List<Support> getInfo(long id, int a) {
 
-        List<Support> info = supportMapper.getInfo(id,a);
+        List<Support> info = supportMapper.getInfo(id, a);
         return info;
     }
 
@@ -49,4 +49,21 @@ public class ISupportServiceImpl extends ServiceImpl<SupportMapper, Support> imp
         List<Support> info = supportMapper.getCommentInfo(commentId);
         return info;
     }
+
+    @Override
+    public List Support(int postId, int postUserId, int dif, String nickName, int supportUserId, int commentId, int commentUserId, Date time) {
+        List info = supportMapper.Support(postId, postUserId, dif, nickName, supportUserId, commentId, commentUserId, time);
+        return info;
+    }
+
+    @Override
+    public void postUpdate(int postId) {
+
+    }
+
+    @Override
+    public void commentUpdate(int commentId) {
+
+    }
+
 }

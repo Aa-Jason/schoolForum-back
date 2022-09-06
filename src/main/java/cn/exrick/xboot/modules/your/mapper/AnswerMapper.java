@@ -7,6 +7,7 @@ import com.baomidou.mybatisplus.core.mapper.BaseMapper;
 import cn.exrick.xboot.modules.your.entity.Answer;
 import org.springframework.stereotype.Repository;
 
+import java.util.Date;
 import java.util.List;
 
 /**
@@ -24,4 +25,5 @@ public interface AnswerMapper extends BaseMapper<Answer> {
     List<Comment> getCommentInfo(String commentId);
 
     List<Answer> getAnswerInfo(String answerId);
+    void newAnswer(int postId, String answerContent, String nickName, int answerUserId, int targetAnswerId, int targetUserId, int commentId, Date time,String targetNickName);
 }

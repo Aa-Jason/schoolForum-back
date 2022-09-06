@@ -51,6 +51,10 @@ public class Answer extends XbootBaseEntity {
     @TableField("targetAnswerId")
     private String targetAnswerId;
 
+    @ApiModelProperty(value = "目标回复昵称")
+    @TableField("targetNickName")
+    private String targetNickName;
+
     @ApiModelProperty(value = "所在帖子Id")
     @TableField("targetPostId")
     private String targetPostId;

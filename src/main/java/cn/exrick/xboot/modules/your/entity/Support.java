@@ -33,23 +33,23 @@ public class Support extends XbootBaseEntity {
 
     @ApiModelProperty(value = "点赞人的用户id")
     @TableField("supportUserId")
-    private String supportUserId;
+    private Integer supportUserId;
 
     @ApiModelProperty(value = "被点赞的评论id")
     @TableField("targetCommentId")
-    private String targetCommentId;
+    private Integer targetCommentId;
 
     @ApiModelProperty(value = "被点赞的帖子id")
     @TableField("targetPostId")
-    private String targetPostId;
+    private Integer targetPostId;
 
     @ApiModelProperty(value = "被点赞评论用户id")
     @TableField("targetCommentUserId")
-    private String targetCommentUserId;
+    private Integer targetCommentUserId;
 
     @ApiModelProperty(value = "帖子所有者id")
     @TableField("targetPostUserId")
-    private String targetPostUserId;
+    private Integer targetPostUserId;
 
 
 

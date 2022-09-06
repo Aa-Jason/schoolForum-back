@@ -4,6 +4,7 @@ import com.baomidou.mybatisplus.core.mapper.BaseMapper;
 import cn.exrick.xboot.modules.your.entity.Support;
 import org.springframework.stereotype.Repository;
 
+import java.util.Date;
 import java.util.List;
 
 /**
@@ -20,4 +21,8 @@ public interface SupportMapper extends BaseMapper<Support> {
     List<Support> getUserInfo(String userId);
 
     List<Support> getCommentInfo(String commentId);
+
+    List Support(int postId, int postUserId, int dif, String nickName, int supportUserId, int commentId, int commentUserId, Date time);
+    void postUpdate(int postId);
+    void commentUpdate(int commentId);
 }

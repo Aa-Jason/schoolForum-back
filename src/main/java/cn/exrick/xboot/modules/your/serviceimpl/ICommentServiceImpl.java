@@ -1,5 +1,6 @@
 package cn.exrick.xboot.modules.your.serviceimpl;
 
+import cn.exrick.xboot.modules.your.entity.Answer;
 import cn.exrick.xboot.modules.your.entity.Post;
 import cn.exrick.xboot.modules.your.entity.UserInfo;
 import cn.exrick.xboot.modules.your.mapper.CommentMapper;
@@ -12,6 +13,7 @@ import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.List;
 
 /**
@@ -43,5 +45,22 @@ public class ICommentServiceImpl extends ServiceImpl<CommentMapper, Comment> imp
     public List<UserInfo> getUserInfo(String userId) {
         List<UserInfo> info = commentMapper.getUserInfo(userId);
         return info;
+    }
+
+    @Override
+    public List<Comment> getCommentByPostId(long postId) {
+        List<Comment> info = commentMapper.getCommentByPostId(postId);
+        return info;
+    }
+
+    @Override
+    public List<Answer> getAnswerByCommentId(String commentId) {
+        List<Answer> info = commentMapper.getAnswerByCommentId(commentId);
+        return info;
+    }
+
+    @Override
+    public void newComment(int postId, String commentContent, String nickName, int commentUserId, int postUserId, Date time) {
+
     }
 }
