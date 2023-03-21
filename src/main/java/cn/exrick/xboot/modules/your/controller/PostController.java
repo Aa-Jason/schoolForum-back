@@ -16,6 +16,7 @@ import io.swagger.annotations.ApiImplicitParams;
 import io.swagger.annotations.ApiOperation;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.cache.annotation.Cacheable;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.transaction.annotation.Transactional;
 
@@ -42,6 +43,7 @@ public class PostController {
     })
     @RequestMapping(value = "/getPostById", method = RequestMethod.POST)
     @ApiOperation(value = "通过用户id或者帖子id获取帖子")
+    @Cacheable(cacheNames = "userid",key = "#id",unless = "#result == null ")
     public Result<List<Post>> getPostById(@RequestParam("id") int id, @RequestParam("dif") int dif) {//用dif区分用户和帖子，1代表用户，2代表帖子
         System.out.println("接收到的帖子ID:" + id);
         List<Post> posts = iPostService.selectAllPostById(id, dif);

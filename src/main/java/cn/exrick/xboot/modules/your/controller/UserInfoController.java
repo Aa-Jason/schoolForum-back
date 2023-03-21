@@ -13,9 +13,12 @@ import io.swagger.annotations.ApiImplicitParams;
 import io.swagger.annotations.ApiOperation;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.cache.CacheManager;
+import org.springframework.cache.annotation.Cacheable;
 import org.springframework.transaction.annotation.Transactional;
 import org.springframework.web.bind.annotation.*;
 
+import javax.annotation.Resource;
 import java.util.List;
 
 /**
@@ -32,6 +35,9 @@ public class UserInfoController {
     @Autowired
     private IUserInfoService iUserInfoService;
 
+    @Resource
+    private CacheManager cacheManager;
+
     //验证账号和密码
     public Result<List<UserInfo>> get(@PathVariable String name,@PathVariable  String pwd) {
 
@@ -40,6 +46,7 @@ public class UserInfoController {
     }
 
     //用账号获取用户id
+    @Cacheable(cacheNames = "username",key = "#name",unless = "#result == null")
     public Result<List<UserInfo>> get(@PathVariable String name) {
 
         List<UserInfo> userid =  iUserInfoService.getUserIdByUsername(name);
@@ -61,6 +68,7 @@ public class UserInfoController {
 
     @RequestMapping(value = "/get/{id}", method = RequestMethod.GET)
     @ApiOperation(value = "通过id获取")
+    @Cacheable(cacheNames = "username",key = "#name",unless = "#result == null")
     public Result<UserInfo> get(@PathVariable long id) {
 
         UserInfo userInfo = iUserInfoService.getById(id);
